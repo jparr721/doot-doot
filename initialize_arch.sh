@@ -39,3 +39,6 @@ cd ~/Desktop/Programming/doot-doot && cat vimrc >> ~/.vimrc
 
 echo "Loading in color scheme."
 cd ~/.vim/bundle && git clone https://github.com/ajmwagar/vim-deus.git
+
+echo "Setting up aliases"
+echo "alias ll='ls -al'" >> ~/.zshrc
