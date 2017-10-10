@@ -26,7 +26,7 @@ echo "Make sure to come back here and set your font"
 
 echo "Installing pathogen..."
 echo "Setting up environment"
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle &&  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 echo "Grabbing NERDtree"
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
@@ -35,7 +35,7 @@ echo "Grab repos..."
 git clone https://github.com/jparr721/doot-doot.git ~/Desktop/Programming
 
 touch ~/.vimrc
-cd ~/Desktop/Programming/doot-doot && cat vimrc >> ~/.vimrc 
+ln -s ~/Desktop/Programming/doot-doot/vimrc  ~/.vimrc 
 
 echo "Loading in color scheme."
 cd ~/.vim/bundle && git clone https://github.com/ajmwagar/vim-deus.git
