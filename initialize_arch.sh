@@ -31,6 +31,10 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle &&  curl -LSso ~/.vim/autoload/pathogen.v
 echo "Grabbing NERDtree"
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 
+echo "Get SYNTASTIC"
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+
 echo "Grab repos..."
 git clone https://github.com/jparr721/doot-doot.git ~/Desktop/Programming
 
