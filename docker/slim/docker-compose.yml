@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=toor
+    ports:
+      - "3306:3306"
+  web:
+    build: .
+    image: myphp
+    ports:
+      - "8000:80"
+networks:
+  default:
+    external:
+      name: slimApi
+
