@@ -14,7 +14,7 @@ def menu():
         fresh = True if fresh == "y" or fresh == "Y" else False
         prepare_linux_zone(fresh)
 
-# Prepares the zone to be coded on, if fresh, install dependencies.
+# Prepares the zone to be coded on. If fresh, install dependencies.
 # Also it assumes atom is default editor. Personal preference.
 def prepare_linux_zone(fresh):
     if platform.system() == "Linux" and not fresh:
