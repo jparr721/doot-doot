@@ -1,0 +1,6 @@
+2018/01/07-20:30:09.652 15568 Reusing MANIFEST /home/lotus/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2018/01/07-20:30:09.652 15568 Recovering log #3
+2018/01/07-20:30:09.655 15568 Reusing old log /home/lotus/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/000003.log 
+2018/01/08-21:29:57.904 23301 Level-0 table #5: started
+2018/01/08-21:29:57.937 23301 Level-0 table #5: 2716116 bytes OK
+2018/01/08-21:29:57.939 23301 Delete type=0 #3
