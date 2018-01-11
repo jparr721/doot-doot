@@ -1,0 +1,18 @@
+2018/01/08-21:31:43.956 23972 Reusing MANIFEST /home/lotus/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2018/01/08-21:31:43.956 23972 Recovering log #4
+2018/01/08-21:31:43.958 23972 Reusing old log /home/lotus/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/000004.log 
+2018/01/10-22:51:53.945 19461 Level-0 table #8: started
+2018/01/10-22:51:53.978 19461 Level-0 table #8: 2640964 bytes OK
+2018/01/10-22:51:53.980 19461 Delete type=0 #4
+2018/01/11-09:10:40.438 19461 Compacting 1@1 + 1@2 files
+2018/01/11-09:10:40.453 19461 Generated table #9@1: 37 keys, 16877 bytes
+2018/01/11-09:10:40.453 19461 Compacted 1@1 + 1@2 files => 16877 bytes
+2018/01/11-09:10:40.463 19461 compacted to: files[ 0 0 1 0 0 0 0 ]
+2018/01/11-09:10:40.463 19461 Delete type=2 #8
+2018/01/11-09:10:40.464 19461 Delete type=2 #5
+2018/01/11-09:16:57.007 19461 Level-0 table #11: started
+2018/01/11-09:16:57.035 19461 Level-0 table #11: 2561083 bytes OK
+2018/01/11-09:16:57.037 19461 Delete type=0 #7
+2018/01/11-10:13:49.062 19461 Level-0 table #13: started
+2018/01/11-10:13:49.090 19461 Level-0 table #13: 2616934 bytes OK
+2018/01/11-10:13:49.092 19461 Delete type=0 #10
