@@ -1,7 +1,0 @@
-INFO 2018-1-11 13:21:36  overwriteThemeFolder
-INFO 2018-1-11 13:21:36  cannot parse user config, use the default one
-INFO 2018-1-11 13:21:36  ------------------start------------------
-INFO 2018-1-11 13:21:36  /usr/share/typora/resources/app/locales/Base.lproj/Menu.json
-INFO 2018-1-11 13:21:40  window.File && (function(){            File.setTheme();        })();
-INFO 2018-1-11 13:42:23  addRecentDocument
-INFO 2018-1-11 13:43:19  ------------------quiting------------------
