@@ -1,0 +1,357 @@
+[01/08/18, 09:06:11:787] info: ╔══════════════════════════════════════════════════════════════════════════════╗
+[01/08/18, 09:06:11:788] info: ║      Slack 3.0.2, linux 4.14.12-1-ARCH on x64 at 01/08/18, 09:06:11:785      ║
+[01/08/18, 09:06:11:788] info: ╚══════════════════════════════════════════════════════════════════════════════╝
+[01/08/18, 09:06:11:867] info: Initializing local storage instance at path: /home/lotus/.config/Slack/local-settings.json
+[01/08/18, 09:06:12:073] error: Calls failed to load, bailing
+[01/08/18, 09:06:12:075] info: updateSuspendResume: true
+[01/08/18, 09:06:12:076] warn: updateSpellcheckerLanguage: Tried to update language, but spellchecker not initialized
+[01/08/18, 09:06:12:214] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    2889,
+    59
+  ],
+  "size": [
+    910,
+    980
+  ]
+}
+[01/08/18, 09:06:14:772] error: 2018/1/8 09:06:14.771 logging error: {"subtype":"api_call_error","message":"{\"ok\":false,\"error\":\"not_admin\"}","stack":"Error\n    at Object.n [as logError] (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:61876)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:134901)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:130100)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:131695)\n    at XMLHttpRequest.m.onreadystatechange (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:133393)"}
+[01/08/18, 09:06:14:774] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "loaded",
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:012] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:012] info: Store: SELECT_CHANNEL C84NW9Q9L
+[01/08/18, 09:06:16:013] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:013] info: Store: UPDATE_SETTINGS
+{
+  "locale": "en-US"
+}
+[01/08/18, 09:06:16:013] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T841C37L5",
+  "theme": {
+    "active_item": "#D39B46",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#15b8d1",
+    "badge": "#DB6668",
+    "column_bg": "#bf4a02",
+    "hover_item": "#434745",
+    "menu_bg": "#3b3b3b",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 09:06:16:025] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": {
+    "image_102": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_102.jpg",
+    "image_132": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_132.jpg",
+    "image_230": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_230.jpg",
+    "image_34": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_34.jpg",
+    "image_44": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_44.jpg",
+    "image_68": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_68.jpg",
+    "image_88": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_88.jpg",
+    "image_original": "https://slack-files2.s3-us-west-2.amazonaws.com/avatars/2017-12-07/283183167970_103c256e4d1bd983bc1c_original.jpg"
+  },
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:028] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:028] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "webapp-loaded",
+  "teamId": "T841C37L5"
+}
+[01/08/18, 09:06:16:143] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T841C37L5",
+  "token": "xoxs-⋯"
+}
+[01/08/18, 09:06:16:703] info: Raw Locale list: ["C","en_AU.utf8","POSIX",""]
+[01/08/18, 09:06:16:704] info: Filtered Locale list: ["en_AU"]
+[01/08/18, 09:06:16:704] info: Counts: {"en":["en_AU"]}
+[01/08/18, 09:06:16:704] info: Setting en
+[01/08/18, 09:06:16:705] info: Result: {"en":"en-AU"}
+[01/08/18, 09:06:16:707] info: Requesting to load en-AU, alternatives are ["en-AU","en-AU","en-US"]
+[01/08/18, 09:06:16:709] info: Loading dictionary for language en-AU
+[01/08/18, 09:06:16:709] info: Actually downloading https://redirector.gvt1.com/edgedl/chrome/dict/en-au-3-0.bdic
+[01/08/18, 09:06:17:690] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 09:06:17:690] info: Creating node-spellchecker instance
+[01/08/18, 09:06:17:693] info: Actually installing spell check provider to Electron
+[01/08/18, 09:06:18:006] info: Unloading spellchecker
+[01/08/18, 09:06:20:453] info: Restoring spellchecker
+[01/08/18, 09:06:20:453] info: Loading dictionary for language en-AU
+[01/08/18, 09:06:20:453] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 09:06:20:468] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 09:06:20:468] info: Creating node-spellchecker instance
+[01/08/18, 09:06:21:358] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    1961,
+    59
+  ],
+  "size": [
+    1838,
+    980
+  ]
+}
+[01/08/18, 09:06:24:280] info: Store: SELECT_CHANNEL C88PMPE86
+[01/08/18, 09:06:26:455] info: Loading dictionary for language en-AU
+[01/08/18, 09:06:26:455] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 09:06:26:458] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 09:06:28:035] info: Store: SELECT_CHANNEL C841D0DHB
+[01/08/18, 09:06:29:500] info: Store: SELECT_CHANNEL C84NW9Q9L
+[01/08/18, 09:06:29:523] info: Loading dictionary for language en-AU
+[01/08/18, 09:06:29:523] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 09:06:29:525] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 09:06:30:008] info: Loading dictionary for language en-AU
+[01/08/18, 09:06:30:009] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 09:06:30:010] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 09:15:10:457] info: Unloading spellchecker
+[01/08/18, 16:36:23:522] error: Jan-8 16:36:23.522 SOCKET-MANAGER (T841C37L5) Closing socket due to unknown error
+[01/08/18, 17:23:14:142] info: Restoring spellchecker
+[01/08/18, 17:23:14:143] info: Loading dictionary for language en-AU
+[01/08/18, 17:23:14:143] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 17:23:14:162] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 17:23:14:162] info: Creating node-spellchecker instance
+[01/08/18, 17:23:26:953] info: Store: SHOW_WEBAPP_DIALOG
+{
+  "dialogType": "prefs"
+}
+[01/08/18, 17:23:34:027] info: Store: UPDATE_SETTINGS
+{
+  "autoHideMenuBar": true
+}
+[01/08/18, 17:23:39:404] info: Unloading spellchecker
+[01/08/18, 17:23:39:419] info: Restoring spellchecker
+[01/08/18, 17:23:39:419] info: Loading dictionary for language en-AU
+[01/08/18, 17:23:39:419] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 17:23:39:443] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 17:23:39:443] info: Creating node-spellchecker instance
+[01/08/18, 17:23:39:479] info: Unloading spellchecker
+[01/08/18, 17:23:39:505] info: Restoring spellchecker
+[01/08/18, 17:23:39:506] info: Loading dictionary for language en-AU
+[01/08/18, 17:23:39:506] info: Returning local copy: /home/lotus/.config/Slack/dictionaries/en-AU.bdic
+[01/08/18, 17:23:39:562] info: Setting current spellchecker to en-AU, requested language was en-AU
+[01/08/18, 17:23:39:562] info: Creating node-spellchecker instance
+[01/08/18, 17:23:40:560] info: Store: SAVE_WINDOW_SETTINGS
+{
+  "isMaximized": false,
+  "position": [
+    1961,
+    59
+  ],
+  "size": [
+    1838,
+    980
+  ]
+}
+[01/08/18, 17:23:42:147] info: Store: OPEN_CONTEXT_MENU
+{
+  "id": 3,
+  "params": "[REDACTED]"
+}
+[01/08/18, 17:23:54:382] info: Store: SHOW_LOGIN_DIALOG
+[01/08/18, 17:23:54:385] info: Unloading spellchecker
+[01/08/18, 17:25:21:501] info: Store: ADD_NEW_TEAM
+{
+  "id": "U8P4VUBEV",
+  "name": "[REDACTED]",
+  "team_id": "T8PQCQ6MT",
+  "team_name": "[REDACTED]",
+  "team_url": "[REDACTED]"
+}
+[01/08/18, 17:25:21:511] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 8,
+  "state": "unloaded",
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:24:699] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 8,
+  "state": "loaded",
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:24:867] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": true,
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:25:200] info: Store: SELECT_CHANNEL C8QMZAT9V
+[01/08/18, 17:25:25:202] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:25:209] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#4C9689",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#38978D",
+    "badge": "#EB4D5C",
+    "column_bg": "#4D394B",
+    "hover_item": "#3E313C",
+    "menu_bg": "#3E313C",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:25:611] info: Store: UPDATE_TEAM_ICONS
+{
+  "icons": false,
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:25:701] info: Store: UPDATE_TEAM_LOCALE
+{
+  "locale": "en-US",
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:25:708] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 8,
+  "state": "webapp-loaded",
+  "teamId": "T8PQCQ6MT"
+}
+[01/08/18, 17:25:25:834] info: Store: STORE_API_TOKEN
+{
+  "teamId": "T8PQCQ6MT",
+  "token": "xoxs-⋯"
+}
+[01/08/18, 17:25:27:258] info: Store: SELECT_CHANNEL D8PHYDP19
+[01/08/18, 17:25:30:348] info: Store: SELECT_CHANNEL C8QMZAT9V
+[01/08/18, 17:25:46:193] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#8C5888",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#00FFB7",
+    "badge": "#DE4C0D",
+    "column_bg": "#4F2F4C",
+    "hover_item": "#3E313C",
+    "menu_bg": "#452842",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:47:551] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#8C5888",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#D0FF00",
+    "badge": "#889100",
+    "column_bg": "#4F2F4C",
+    "hover_item": "#3E313C",
+    "menu_bg": "#452842",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:48:746] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#6698C8",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#94E864",
+    "badge": "#78AF8F",
+    "column_bg": "#303E4D",
+    "hover_item": "#4A5664",
+    "menu_bg": "#2C3849",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:50:825] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#D39B46",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#99D04A",
+    "badge": "#DB6668",
+    "column_bg": "#4D5250",
+    "hover_item": "#434745",
+    "menu_bg": "#444A47",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:52:384] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#F79F66",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#F79F66",
+    "badge": "#F15340",
+    "column_bg": "#0D7E83",
+    "hover_item": "#D37C71",
+    "menu_bg": "#076570",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/08/18, 17:25:53:659] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#2D9EE0",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#60D156",
+    "badge": "#DC5960",
+    "column_bg": "#F8F8FA",
+    "hover_item": "#FFFFFF",
+    "menu_bg": "#F8F8FA",
+    "text_color": "#383F45"
+  }
+}
+[01/08/18, 17:25:55:320] info: Store: UPDATE_TEAM_THEME
+{
+  "teamId": "T8PQCQ6MT",
+  "theme": {
+    "active_item": "#6698C8",
+    "active_item_text": "#FFFFFF",
+    "active_presence": "#94E864",
+    "badge": "#78AF8F",
+    "column_bg": "#303E4D",
+    "hover_item": "#4A5664",
+    "menu_bg": "#2C3849",
+    "text_color": "#FFFFFF"
+  }
+}
+[01/09/18, 17:21:59:745] error: Jan-9 17:21:59.745 SOCKET-MANAGER (T841C37L5) Closing socket due to unknown error
+[01/09/18, 17:21:59:749] info: Store: REFRESH_TEAMS
+{
+  "teamIds": [
+    "T841C37L5"
+  ]
+}
+[01/09/18, 17:21:59:750] info: Window is unloading, winssb is no longer accessible
+[01/09/18, 17:21:59:754] info: Store: UPSERT_WEB_CONTENTS
+{
+  "id": 3,
+  "state": "page-will-navigate",
+  "teamId": "T841C37L5"
+}
+[01/09/18, 17:21:59:942] info: Store: UPDATE_SESSION_STATUS
+{
+  "hasValidSession": false,
+  "teamId": "T841C37L5"
+}

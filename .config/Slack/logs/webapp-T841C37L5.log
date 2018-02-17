@@ -1,0 +1,188 @@
+info: ╔══════════════════════════════════════════════════════════════════════════════╗
+info: ║      Slack 3.0.2, linux 4.14.12-1-ARCH on x64 at 01/08/18, 09:06:11:162      ║
+info: ╚══════════════════════════════════════════════════════════════════════════════╝
+error: Calls failed to load, bailing
+info: Jan-8 09:06:14.690 [BOOT] booted! pri:0 version:1515415514 start_ms:1515420372447 (1622ms ago)
+info: Jan-8 09:06:14.730 [BOOT] Starting incremental boot (early)
+info: Jan-8 09:06:14.411 [SOCKET-MANAGER] (T841C37L5) Changing from never_connected to prov_connect
+info: Jan-8 09:06:14.412 [SOCKET-MANAGER] (T841C37L5) will stay in prov_connect state for up to 10000 ms
+info: Jan-8 09:06:14.412 [SOCKET-MANAGER] (T841C37L5) Changing from prov_connect to prov_connecting
+info: Jan-8 09:06:14.412 [SOCKET-MANAGER] (T841C37L5) will stay in prov_connecting state for up to 20000 ms
+info: Jan-8 09:06:14.761 [SOCKET-MANAGER] (T841C37L5) Changing from prov_connecting to prov_connected
+info: Jan-8 09:06:14.761 [SOCKET-MANAGER] (T841C37L5) will stay in prov_connected state for up to 60000 ms
+info: Jan-8 09:06:14.762 [INFO] Got start data from Socket Manager; hydrating it
+error: 2018/1/8 09:06:14.771 logging error: {"subtype":"api_call_error","message":"{\"ok\":false,\"error\":\"not_admin\"}","stack":"Error\n    at Object.n [as logError] (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:61876)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:134901)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:130100)\n    at e (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:131695)\n    at XMLHttpRequest.m.onreadystatechange (https://a.slack-edge.com/bv1-1/rollup-secondary_a_required.8260e52d9d95ba877a72.min.js:1:133393)"}
+warn: Jan-8 09:06:14.772 args/data logging skipped, run with ?log_api_failures=1 to enable full logging
+info: Jan-8 09:06:15.300 [BOOT] Finalizing incremental boot
+warn: Jan-8 09:06:15.645 activity is not scalar! it needs to be handled by upsertTeam specifically to test if it has changed! object
+info: Jan-8 09:06:15.659 [BOOT] Completed incremental boot
+info: Jan-8 09:06:15.922 [BOOT] _maybeFinalizeOrOpenConnectionToMS will finalize SocketManager
+info: Jan-8 09:06:15.922 [SOCKET-MANAGER] (T841C37L5) Changing from prov_connected to prov_finalize
+info: Jan-8 09:06:15.922 [SOCKET-MANAGER] (T841C37L5) will stay in prov_finalize state for up to 10000 ms
+info: Jan-8 09:06:15.923 [SOCKET-MANAGER] (T841C37L5) Changing from prov_finalize to prov_finalizing
+info: Jan-8 09:06:15.923 [SOCKET-MANAGER] (T841C37L5) will stay in prov_finalizing state for up to 10000 ms
+info: Jan-8 09:06:15.923 [SOCKET-MANAGER] (T841C37L5) Changing from prov_finalizing to connected
+info: Jan-8 09:06:15.923 [SOCKET-MANAGER] (T841C37L5) will stay in connected state for up to Infinity ms
+info: Jan-8 09:06:15.923 [BOOT] _maybeFinalizeOrOpenConnectionToMS did finalize SocketManager
+info: Jan-8 09:06:15.924 [BOOT] Finished first boot 1518 ms after DOM ready
+info: Jan-8 09:06:16.124 [INFO] Finished processing users.counts
+info: Jan-8 09:06:16.124 [INFO] 0 IMs with unreads, 0 total dm_count
+info: Jan-8 09:06:24.200 [ACTION:CHANNEL-SIDEBAR] Selected C88PMPE86
+info: Jan-8 09:06:27.983 [ACTION:CHANNEL-SIDEBAR] Selected C841D0DHB
+info: Jan-8 09:06:28.160 [HISTORY] Not loading scrollback in C841D0DHB: We have the oldest msg: 1511294935.000748. is_limited:undefined
+info: Jan-8 09:06:29.302 [ACTION:CHANNEL-SIDEBAR] Selected C84NW9Q9L
+info: Jan-8 16:36:23.521 [SOCKET-MANAGER] (T841C37L5) Changing from connected to error
+info: Jan-8 16:36:23.521 [SOCKET-MANAGER] (T841C37L5) will stay in error state for up to 10000 ms
+error: Jan-8 16:36:23.522 SOCKET-MANAGER (T841C37L5) Closing socket due to unknown error
+info: 2018/1/8 16:36:23.525  Stacktrace: ↴
+ at e (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:62315)
+at https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:874999
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1080190)
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1081913)
+at s (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1001226)
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1082286)
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1076326)
+at e.<anonymous> (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:834405)
+at O (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1134323)
+at WebSocket._socket.onclose (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1135989)
+info: Jan-8 16:36:23.528 [INFO] Hiding the reconnection banner because we are disconnected
+info: Jan-8 16:36:23.543 [SOCKET-MANAGER] (T841C37L5) Changing from error to wait_for_connectivity
+info: Jan-8 16:36:23.543 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_connectivity state for up to 300000 ms
+info: Jan-8 16:36:23.738 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_connectivity to wait_for_rate_limit
+info: Jan-8 16:36:23.738 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_rate_limit state for up to 120000 ms
+info: Jan-8 16:36:23.739 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_rate_limit to connect
+info: Jan-8 16:36:23.739 [SOCKET-MANAGER] (T841C37L5) will stay in connect state for up to 10000 ms
+info: Jan-8 16:36:23.739 [SOCKET-MANAGER] (T841C37L5) Changing from connect to checking_fast_reconnect
+info: Jan-8 16:36:23.739 [SOCKET-MANAGER] (T841C37L5) will stay in checking_fast_reconnect state for up to 60000 ms
+info: Jan-8 16:36:23.798 [SOCKET-MANAGER] (T841C37L5) Changing from checking_fast_reconnect to connecting
+info: Jan-8 16:36:23.798 [SOCKET-MANAGER] (T841C37L5) will stay in connecting state for up to 20000 ms
+info: Jan-8 16:36:24.520 [SOCKET-MANAGER] (T841C37L5) Changing from connecting to connected
+info: Jan-8 16:36:24.520 [SOCKET-MANAGER] (T841C37L5) will stay in connected state for up to Infinity ms
+info: Jan-8 16:36:24.530 [EVENTLOG] fr=true, lc=false, lt=1515435257.000473
+info: Jan-8 21:32:58.635 [SOCKET-MANAGER] (T841C37L5) got offline event; moving to DISCONNECT as needed
+info: Jan-8 21:32:58.635 [SOCKET-MANAGER] (T841C37L5) Changing from connected to disconnect
+info: Jan-8 21:32:58.635 [SOCKET-MANAGER] (T841C37L5) will stay in disconnect state for up to 10000 ms
+info: Jan-8 21:32:58.636 [SOCKET-MANAGER] (T841C37L5) Changing from disconnect to disconnecting
+info: Jan-8 21:32:58.636 [SOCKET-MANAGER] (T841C37L5) will stay in disconnecting state for up to 10000 ms
+info: Jan-8 21:32:58.636 [SOCKET-MANAGER] (T841C37L5) Changing from disconnecting to disconnected
+info: Jan-8 21:32:58.637 [SOCKET-MANAGER] (T841C37L5) will stay in disconnected state for up to 10000 ms
+info: Jan-8 21:32:58.637 [SOCKET-MANAGER] (T841C37L5) Disconnected! Online? false
+info: Jan-8 21:32:58.637 [SOCKET-MANAGER] (T841C37L5) Changing from disconnected to wait_for_connectivity
+info: Jan-8 21:32:58.637 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_connectivity state for up to 300000 ms
+info: Jan-8 21:32:58.639 [INFO] Hiding the reconnection banner because we are disconnected
+warn: Jan-8 21:33:00.266 Internet connection still offline after 1 attempts (browser says it is still offline)
+warn: Jan-8 21:33:02.266 Internet connection still offline after 2 attempts (browser says it is still offline)
+warn: Jan-8 21:33:04.266 Internet connection still offline after 3 attempts (browser says it is still offline)
+info: Jan-8 21:33:06.461 [INFO] Internet connection has been re-established after 4 retry attempts; offline for NaN seconds
+info: Jan-8 21:33:06.461 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_connectivity to wait_for_rate_limit
+info: Jan-8 21:33:06.461 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_rate_limit state for up to 120000 ms
+info: Jan-8 21:33:06.462 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_rate_limit to connect
+info: Jan-8 21:33:06.462 [SOCKET-MANAGER] (T841C37L5) will stay in connect state for up to 10000 ms
+info: Jan-8 21:33:06.462 [SOCKET-MANAGER] (T841C37L5) Changing from connect to checking_fast_reconnect
+info: Jan-8 21:33:06.462 [SOCKET-MANAGER] (T841C37L5) will stay in checking_fast_reconnect state for up to 60000 ms
+info: Jan-8 21:33:06.582 [SOCKET-MANAGER] (T841C37L5) Changing from checking_fast_reconnect to connecting
+info: Jan-8 21:33:06.582 [SOCKET-MANAGER] (T841C37L5) will stay in connecting state for up to 20000 ms
+info: Jan-8 21:33:06.892 [SOCKET-MANAGER] (T841C37L5) Changing from connecting to connected
+info: Jan-8 21:33:06.892 [SOCKET-MANAGER] (T841C37L5) will stay in connected state for up to Infinity ms
+info: Jan-8 21:33:06.893 [EVENTLOG] fr=true, lc=false, lt=1515435257.000473
+info: Jan-8 22:04:06.639 [SOCKET-MANAGER] (T841C37L5) got offline event; moving to DISCONNECT as needed
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) Changing from connected to disconnect
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) will stay in disconnect state for up to 10000 ms
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) Changing from disconnect to disconnecting
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) will stay in disconnecting state for up to 10000 ms
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) Changing from disconnecting to disconnected
+info: Jan-8 22:04:06.640 [SOCKET-MANAGER] (T841C37L5) will stay in disconnected state for up to 10000 ms
+info: Jan-8 22:04:06.641 [SOCKET-MANAGER] (T841C37L5) Disconnected! Online? false
+info: Jan-8 22:04:06.641 [SOCKET-MANAGER] (T841C37L5) Changing from disconnected to wait_for_connectivity
+info: Jan-8 22:04:06.641 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_connectivity state for up to 300000 ms
+info: Jan-8 22:04:06.642 [INFO] Hiding the reconnection banner because we are disconnected
+warn: Jan-8 22:04:08.266 Internet connection still offline after 1 attempts (browser says it is still offline)
+warn: Jan-8 22:04:09.266 Internet connection still offline after 2 attempts (browser says it is still offline)
+warn: Jan-8 22:04:11.266 Internet connection still offline after 3 attempts (browser says it is still offline)
+warn: Jan-8 22:04:13.266 Internet connection still offline after 4 attempts (browser says it is still offline)
+info: Jan-8 22:04:14.416 [INFO] Internet connection has been re-established after 5 retry attempts; offline for NaN seconds
+info: Jan-8 22:04:14.416 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_connectivity to wait_for_rate_limit
+info: Jan-8 22:04:14.416 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_rate_limit state for up to 120000 ms
+info: Jan-8 22:04:14.417 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_rate_limit to connect
+info: Jan-8 22:04:14.417 [SOCKET-MANAGER] (T841C37L5) will stay in connect state for up to 10000 ms
+info: Jan-8 22:04:14.417 [SOCKET-MANAGER] (T841C37L5) Changing from connect to checking_fast_reconnect
+info: Jan-8 22:04:14.417 [SOCKET-MANAGER] (T841C37L5) will stay in checking_fast_reconnect state for up to 60000 ms
+info: Jan-8 22:04:14.556 [SOCKET-MANAGER] (T841C37L5) Changing from checking_fast_reconnect to connecting
+info: Jan-8 22:04:14.556 [SOCKET-MANAGER] (T841C37L5) will stay in connecting state for up to 20000 ms
+info: Jan-8 22:04:15.102 [SOCKET-MANAGER] (T841C37L5) Changing from connecting to connected
+info: Jan-8 22:04:15.102 [SOCKET-MANAGER] (T841C37L5) will stay in connected state for up to Infinity ms
+info: Jan-8 22:04:15.102 [EVENTLOG] fr=true, lc=false, lt=1515435257.000473
+info: Jan-8 22:53:21.751 [SOCKET-MANAGER] (T841C37L5) got offline event; moving to DISCONNECT as needed
+info: Jan-8 22:53:21.751 [SOCKET-MANAGER] (T841C37L5) Changing from connected to disconnect
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) will stay in disconnect state for up to 10000 ms
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) Changing from disconnect to disconnecting
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) will stay in disconnecting state for up to 10000 ms
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) Changing from disconnecting to disconnected
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) will stay in disconnected state for up to 10000 ms
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) Disconnected! Online? false
+info: Jan-8 22:53:21.752 [SOCKET-MANAGER] (T841C37L5) Changing from disconnected to wait_for_connectivity
+info: Jan-8 22:53:21.753 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_connectivity state for up to 300000 ms
+info: Jan-8 22:53:21.755 [INFO] Hiding the reconnection banner because we are disconnected
+warn: Jan-9 17:21:23.366 Internet connection still offline after 1 attempts (browser says it is still offline)
+warn: Jan-9 17:21:24.432 Internet connection still offline after 2 attempts (browser says it is still offline)
+warn: Jan-9 17:21:26.432 Internet connection still offline after 3 attempts (browser says it is still offline)
+warn: Jan-9 17:21:28.432 Internet connection still offline after 4 attempts (browser says it is still offline)
+warn: Jan-9 17:21:29.432 Internet connection still offline after 5 attempts (browser says it is still offline)
+warn: Jan-9 17:21:31.432 Internet connection still offline after 6 attempts (browser says it is still offline)
+warn: Jan-9 17:21:33.432 Internet connection still offline after 7 attempts (browser says it is still offline)
+warn: Jan-9 17:21:35.432 Internet connection still offline after 8 attempts (browser says it is still offline)
+warn: Jan-9 17:21:37.436 Internet connection still offline after 9 attempts (unable to reach API)
+warn: Jan-9 17:21:39.432 Internet connection still offline after 10 attempts (browser says it is still offline)
+warn: Jan-9 17:21:41.434 Internet connection still offline after 11 attempts (unable to reach API)
+warn: Jan-9 17:21:43.435 Internet connection still offline after 12 attempts (unable to reach API)
+warn: Jan-9 17:21:45.482 Internet connection still offline after 13 attempts (unable to reach API)
+warn: Jan-9 17:21:47.701 Internet connection still offline after 14 attempts (unable to reach API)
+warn: Jan-9 17:21:49.506 Internet connection still offline after 15 attempts (unable to reach API)
+warn: Jan-9 17:21:51.448 Internet connection still offline after 16 attempts (unable to reach API)
+warn: Jan-9 17:21:53.605 Internet connection still offline after 17 attempts (unable to reach API)
+warn: Jan-9 17:21:55.562 Internet connection still offline after 18 attempts (unable to reach API)
+info: Jan-9 17:21:59.420 [INFO] Internet connection has been re-established after 19 retry attempts; offline for NaN seconds
+info: Jan-9 17:21:59.420 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_connectivity to wait_for_rate_limit
+info: Jan-9 17:21:59.430 [SOCKET-MANAGER] (T841C37L5) will stay in wait_for_rate_limit state for up to 120000 ms
+info: Jan-9 17:21:59.430 [SOCKET-MANAGER] (T841C37L5) Changing from wait_for_rate_limit to connect
+info: Jan-9 17:21:59.430 [SOCKET-MANAGER] (T841C37L5) will stay in connect state for up to 10000 ms
+info: Jan-9 17:21:59.430 [SOCKET-MANAGER] (T841C37L5) Changing from connect to checking_fast_reconnect
+info: Jan-9 17:21:59.430 [SOCKET-MANAGER] (T841C37L5) will stay in checking_fast_reconnect state for up to 60000 ms
+info: Jan-9 17:21:59.440 [SOCKET-MANAGER] (T841C37L5) Changing from checking_fast_reconnect to prov_connect
+info: Jan-9 17:21:59.440 [SOCKET-MANAGER] (T841C37L5) will stay in prov_connect state for up to 10000 ms
+info: Jan-9 17:21:59.440 [SOCKET-MANAGER] (T841C37L5) Changing from prov_connect to prov_connecting
+info: Jan-9 17:21:59.440 [SOCKET-MANAGER] (T841C37L5) will stay in prov_connecting state for up to 20000 ms
+info: Jan-9 17:21:59.744 [SOCKET-MANAGER] (T841C37L5) received an error of type -1337: invalid_auth
+info: Jan-9 17:21:59.745 [SOCKET-MANAGER] (T841C37L5) Changing from prov_connecting to error
+info: Jan-9 17:21:59.745 [SOCKET-MANAGER] (T841C37L5) will stay in error state for up to 10000 ms
+error: Jan-9 17:21:59.745 SOCKET-MANAGER (T841C37L5) Closing socket due to unknown error
+info: 2018/1/9 17:21:59.746  Stacktrace: ↴
+ at e (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:62315)
+at https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:874999
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1080190)
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1081913)
+at e (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1077120)
+at e.<anonymous> (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:834405)
+at x (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1135045)
+at WebSocket._socket.onmessage (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1136037)
+info: Jan-9 17:21:59.747 [INFO] TS.reload() called: "Reloading due to error invalid_auth"
+info: 2018/1/9 17:21:59.748  Stacktrace: ↴
+ at Object.e [as reload] (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:72734)
+at e (https://a.slack-edge.com/bv1-1/rollup-core_required_ts.6d06c966d55d1bbe7e91.min.js:1:76517)
+at i.execute (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:713421)
+at s.dispatch (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:715843)
+at dispatch (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:714220)
+at https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:874999
+at l (https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1825251)
+at https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1815391
+at Array.forEach (<anonymous>)
+at https://a.slack-edge.com/bv1-1/application.f92ecd64915f136a41d0.min.js:1:1815371
+at u (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:257906)
+at O._settlePromiseFromHandler (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:230391)
+at O._settlePromise (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:231243)
+at O._settlePromiseCtx (https://a.slack-edge.com/bv1-1/rollup-core_required_libs.20cf99d99bc71a69c9d4.min.js:1:231783)
+info: Jan-9 17:21:59.752 [INFO] client window unloaded!
+error: Calls failed to load, bailing
+info: Jan-9 17:22:03.475 [BOOT] booted! pri:0 version:1515535571 start_ms:1515536521177 (2297ms ago)
+info: Jan-9 17:22:03.598 [INFO] no TS.client on page:https://expectancylearning.slack.com/?redir=%2Fmessages%2FC84NW9Q9L
+info: Jan-9 17:22:04.484 [INFO] running without a user
