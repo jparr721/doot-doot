@@ -1,0 +1,10 @@
+[Event/notification]
+Execute=
+Logfile=
+TTS=
+
+[Event/plasmoidDeleted]
+Execute=
+Logfile=
+Sound=
+TTS=

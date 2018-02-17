@@ -1,0 +1,4 @@
+[TimeZones]
+LocalZone=America/Detroit
+ZoneinfoDir=/usr/share/zoneinfo
+Zonetab=/usr/share/zoneinfo/zone.tab
