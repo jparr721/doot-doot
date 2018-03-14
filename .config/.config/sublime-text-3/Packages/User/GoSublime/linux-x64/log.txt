@@ -1,2 +1,0 @@
-Gocode pkg: "."
-Gocode env: gocode.margoEnv{LibPath:"/usr/lib/go/pkg/linux_amd64:/home/lotus/go/pkg/linux_amd64", GOOS:"linux", GOARCH:"amd64", Compiler:"gc", GOROOT:"/usr/lib/go", GOPATH:"/home/lotus/go", InstallSuffix:""}

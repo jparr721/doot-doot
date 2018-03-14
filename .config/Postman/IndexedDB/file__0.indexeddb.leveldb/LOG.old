@@ -1,3 +1,6 @@
-2018/01/18-15:14:12.038 16049 Reusing MANIFEST /home/lotus/.config/Postman/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
-2018/01/18-15:14:12.038 16049 Recovering log #3
-2018/01/18-15:14:12.055 16049 Reusing old log /home/lotus/.config/Postman/IndexedDB/file__0.indexeddb.leveldb/000003.log 
+2018/02/23-08:44:24.154 15606 Reusing MANIFEST /home/lotus/.config/Postman/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2018/02/23-08:44:24.154 15606 Recovering log #3
+2018/02/23-08:44:24.183 15606 Reusing old log /home/lotus/.config/Postman/IndexedDB/file__0.indexeddb.leveldb/000003.log 
+2018/02/23-08:44:28.164 15713 Level-0 table #5: started
+2018/02/23-08:44:28.190 15713 Level-0 table #5: 2093840 bytes OK
+2018/02/23-08:44:28.193 15713 Delete type=0 #3

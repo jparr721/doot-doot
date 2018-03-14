@@ -44,6 +44,8 @@ height = 27
 fixed-center = true 
 bottom = true
 
+monitor = ${env:MONITOR:}
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -165,8 +167,9 @@ label-urgent-padding = 2
 type = internal/date
 interval = 5
 
-date = "%a %d-%m-%Y"
-time = %H:%M
+date = "%a %d/%m/%Y"
+;time = %H:%M
+time = %I:%M %p
 
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
@@ -201,6 +204,23 @@ menu-2-0 = power off
 menu-2-0-exec = systemctl poweroff; mode "default"
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/temperature]
+type = internal/temperature
+
+interval = 0.5
+
+thermal-zone = 0
+
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
+
+warn-temperature = 50
+
+label = TEMP %temperature%
+
+format = <ramp> <label>
+
+units = true
 
 [settings]
 screenchange-reload = true

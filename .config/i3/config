@@ -20,7 +20,7 @@ set $white               #aaaaaa
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,7 +40,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal 
+bindsym $mod+Return exec gnome-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -132,7 +132,6 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # open windows in some workspaces on restart
-assign [class="Atom"] $workspace2
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -250,7 +249,7 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 5s && kalu"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always feh --bg-fill ~/Pictures/arnold.jpg
+exec_always feh --bg-fill ~/Pictures/retro_sunset.jpg
 exec_always "compton -f"
 
 # i3 Gaps
