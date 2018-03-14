@@ -41,6 +41,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+let g:rustfmt_autosave = 1
 
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
 set laststatus=2
