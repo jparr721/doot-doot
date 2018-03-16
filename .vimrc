@@ -1,12 +1,14 @@
 "set term=xterm-256color
 set t_Co=256
-set laststatus=2
+"set laststatus=2
 
 set nocompatible
 set cindent
 syntax on
 set listchars=tab:▸\ ,eol:⏎,extends:☢,nbsp:♞,trail:☭
-set ts=8
+set ts=4
+set expandtab
+set shiftwidth=4
 set list
 set nu
 set rnu
