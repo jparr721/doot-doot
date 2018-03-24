@@ -1,11 +1,14 @@
+call plug#begin('~/.vim/plugged')
+Plug 'nightsense/office'
+call plug#end()
 "set term=xterm-256color
 set t_Co=256
+set encoding=utf-8
 "set laststatus=2
 
 set nocompatible
 set cindent
 syntax on
-set listchars=tab:▸\ ,eol:⏎,extends:☢,nbsp:♞,trail:☭
 set ts=4
 set expandtab
 set shiftwidth=4
@@ -38,6 +41,11 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+let g:powerline_pycmd="py3"
+let g:office_light_LineNr = 'off'
+let g:office_dark_CursorLineNr = 'off'
+let g:office_light_CursorLineNr = 'off'
+let g:office_dark_LineNr = 'off'
 
 " Open go doc in vertical window, horizontal, or tab
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
