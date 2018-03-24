@@ -25,7 +25,6 @@ execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 
 colorscheme gruvbox
-set background=dark
 
 " use goimports for formatting
 let g:go_fmt_command = "goimports"
