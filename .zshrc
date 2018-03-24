@@ -12,7 +12,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+ZSH_THEME="oxide"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -103,6 +103,7 @@ alias code='cd ~/Desktop/Programming'
 alias lock='~/lock.sh'
 alias sleep='sudo systemctl suspend'
 alias jle='java -Xmx256m -jar /home/lotus/Documents/SchoolWork/CIS351/JLS.jar'
+alias poly-reload='polybar -r mybar'
 
 #. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 powerline-daemon -q
