@@ -238,7 +238,8 @@ function load_ide_configs() {
 
 function welcome() {
 	clear
+	title_page
+	echo "Checking configs..."
 	check_vimrc
 	check_vim_colors
-	title_page
 }
