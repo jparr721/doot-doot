@@ -10,9 +10,6 @@ set nocompatible
 set cindent
 syntax on
 set ts=4
-set expandtab
-set shiftwidth=4
-set list
 set nu
 set rnu
 set smartindent
@@ -22,6 +19,9 @@ map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
 
+" Python specific magic
+au Filetype python setl et ts=4 sw=4
+
 
 execute pathogen#infect()
 "	autocmd vimenter * NERDTree
@@ -29,6 +29,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 colorscheme gruvbox
 set background=dark
+filetype plugin on
+
+let g:go_disable_autoinstall = 0
 
 " use goimports for formatting
 let g:go_fmt_command = "goimports"
@@ -52,6 +55,44 @@ au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 let g:rustfmt_autosave = 1
+
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" tagbar
+nmap <F1> :TagbarToggle<CR>
+
+" ctags
+let g:tagbar_type_go = {
+		\ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+	\ }
 
 set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
 set laststatus=2

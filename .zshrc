@@ -99,11 +99,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -al --color=auto'
 alias home='cd ~/Desktop'
-alias code='cd ~/Desktop/Programming'
+alias code='cd ~/Code'
 alias lock='~/lock.sh'
 alias sleep='sudo systemctl suspend'
-alias jle='java -Xmx256m -jar /home/lotus/Documents/SchoolWork/CIS351/JLS.jar'
 alias poly-reload='polybar -r mybar'
+alias trio='nmcli dev wifi con "TrioTownHomes"'
 
 #. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 powerline-daemon -q
