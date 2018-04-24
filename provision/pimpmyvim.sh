@@ -158,12 +158,21 @@ function colorscheme() {
 	done
 }
 
+function reset() {
+	echo "Resetting vimrc"
+	cleanup_vimrc
+	echo "Running from fresh install"
+	fresh_install
+}
+
 function fresh_install() {
     echo "Setting up base configs..."
     echo set t_Co=256 >> $vimrc
     echo set encoding=utf-8 >> $vimrc
 	tab_or_space
 	release_the_pathogen
+	colorscheme
+	ide_mode
 }	
 
 function help_screen() {
@@ -222,7 +231,7 @@ function ide_mode() {
 		echo -e "${green_color}Vim pimper has finished, have a great day. -j"
 		break
 	else
-		echo -e "${red_color}Improper request selected..."
+		echo -e "${red_color}Improper request selected... exiting"
 		break
 	fi
 
@@ -242,4 +251,5 @@ function welcome() {
 	echo "Checking configs..."
 	check_vimrc
 	check_vim_colors
+	display_options
 }
