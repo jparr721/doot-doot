@@ -77,8 +77,8 @@ function print_animated_saucer() {
 
 function release_the_pathogen() {
 	echo -e "${red_color_title}Releasing the pathogen..."
-    mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-    curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    	mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+    	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 	echo "execute pathogen#infect()" >> $vimrc
 	echo -e "${green_color_title}Pathogen injected"
 }
@@ -125,7 +125,7 @@ function colorscheme() {
 	check_vim_colors
 	echo -e "${red_color_title}BY THE WAY HOMIE"
 	sleep 0.5 && echo "These colors are only a very small sample of what is out there."
-    sleep 0.75 && echo "Use these as a starting point. If you love it, great, if not, check out other ones!"	
+    	sleep 0.75 && echo "Use these as a starting point. If you love it, great, if not, check out other ones!"	
 	echo -e "${green_color}With that said, select a color scheme"
 	echo "-----------------------------------------------------------------------------------------"
 	PS3="Select a scheme: "
@@ -166,9 +166,9 @@ function reset() {
 }
 
 function fresh_install() {
-    echo "Setting up base configs..."
-    echo set t_Co=256 >> $vimrc
-    echo set encoding=utf-8 >> $vimrc
+    	echo "Setting up base configs..."
+    	echo set t_Co=256 >> $vimrc
+    	echo set encoding=utf-8 >> $vimrc
 	tab_or_space
 	release_the_pathogen
 	colorscheme
