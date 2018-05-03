@@ -23,7 +23,9 @@ set encoding=utf-8
 set nocompatible
 set cindent
 syntax on
-set ts=4
+set ts=2
+set expandtab
+set shiftwidth=2
 set nu
 set rnu
 set smartindent
