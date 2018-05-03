@@ -1,10 +1,25 @@
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/scrooloose/nerdtree.git'
+Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'https://github.com/w0rp/ale.git' 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'https://github.com/yuttie/comfortable-motion.vim.git'
+Plug 'https://github.com/vim-airline/vim-airline.git'
+
+call plug#end()
+let g:deoplete#enable_at_startup = 1
+
 "set term=xterm-256color
 set t_Co=256
 set encoding=utf-8
 "set laststatus=2
 
-"enable mouse support
-set mouse=a
 set nocompatible
 set cindent
 syntax on
@@ -17,13 +32,6 @@ map<C-h> <C-w>h
 map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
-
-" Python specific magic
-au Filetype python setl et ts=4 sw=4
-
-
-execute pathogen#infect()
-"	autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 colorscheme gruvbox
@@ -51,8 +59,8 @@ au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 let g:rustfmt_autosave = 1
 
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -89,5 +97,3 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 	\ }
 
-set rtp+=/usr/lib/python3.6/site-packages/powerline/bindings/vim/
-set laststatus=2
