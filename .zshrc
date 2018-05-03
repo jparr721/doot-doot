@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/lotus/.oh-my-zsh
+  export ZSH=/home/black/.oh-my-zsh
 
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
@@ -12,7 +12,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="oxide"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -104,7 +104,5 @@ alias lock='~/lock.sh'
 alias sleep='sudo systemctl suspend'
 alias poly-reload='polybar -r mybar'
 alias trio='nmcli dev wifi con "TrioTownHomes"'
+alias wifi='nmcli dev wifi con'
 
-#. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
-powerline-daemon -q
-. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
