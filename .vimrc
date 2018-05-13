@@ -11,6 +11,7 @@ else
 endif
 Plug 'https://github.com/yuttie/comfortable-motion.vim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 
 call plug#end()
 let g:deoplete#enable_at_startup = 1
@@ -99,3 +100,11 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 	\ }
 
+" Ctrl-p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Remove filthy whitespace
+autocmd BufWritePre * :%s/\s\+$//e
