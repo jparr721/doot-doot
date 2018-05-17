@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
-Plug 'https://github.com/w0rp/ale.git' 
+Plug 'https://github.com/w0rp/ale.git'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -108,3 +108,10 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 " Remove filthy whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" ALE autocomplete
+let g:ale_fixers = {
+      \   'javascript': ['eslint'],
+      \}
+
+ let g:ale_fix_on_save = 1
