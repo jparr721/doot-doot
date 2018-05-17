@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
-Plug 'https://github.com/w0rp/ale.git' 
+Plug 'https://github.com/w0rp/ale.git'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -12,6 +12,8 @@ endif
 Plug 'https://github.com/yuttie/comfortable-motion.vim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/cocopon/iceberg.vim.git'
 
 call plug#end()
 let g:deoplete#enable_at_startup = 1
@@ -37,8 +39,8 @@ map<C-k> <C-w>k
 map<C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 
-colorscheme gruvbox
-set background=dark
+colorscheme iceberg
+" set background=dark
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
