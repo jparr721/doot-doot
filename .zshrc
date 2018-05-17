@@ -105,6 +105,7 @@ alias lock='~/lock.sh'
 alias sleep='sudo systemctl suspend'
 alias poly-reload='polybar -r mybar'
 alias wifi='nmcli dev wifi con'
+alias sec='cd ~/Infosec'
 
 source /usr/share/nvm/init-nvm.sh
 
