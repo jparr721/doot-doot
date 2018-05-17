@@ -6,6 +6,7 @@
 
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
+  export NODE_ENV=development
 
   export TESSDATA_PREFIX=/usr/share/tessdata
 
@@ -105,3 +106,7 @@ alias sleep='sudo systemctl suspend'
 alias poly-reload='polybar -r mybar'
 alias wifi='nmcli dev wifi con'
 
+source /usr/share/nvm/init-nvm.sh
+
+# Fix annoying ctrl-s shit
+stty -ixon
