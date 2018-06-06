@@ -14,9 +14,15 @@ Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/cocopon/iceberg.vim.git'
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'vim-airline/vim-airline-themes
 
 call plug#end()
 let g:deoplete#enable_at_startup = 1
+
+leg g:airline_theme='bubblegum'
 
 "set term=xterm-256color
 set t_Co=256
@@ -38,9 +44,10 @@ map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
+set backspace=indent,eol,start
 
-colorscheme iceberg
-" set background=dark
+colorscheme palenight
+set background=dark
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
@@ -117,3 +124,14 @@ let g:ale_fixers = {
       \}
 
  let g:ale_fix_on_save = 1
+ let g:deoplete#enable_at_startup = 1
+ let g:deoplete#sources#ternjs#docs = 1
+ let g:deoplete#sources#ternjs#filetypes = [
+ 	\ 'jsx',
+	\ 'javascript.jsx',
+	\ 'vue',
+	\ 'js',
+	\ 'mjs'
+	\]
+	
+set completeopt-=preview
