@@ -17,12 +17,12 @@ Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'vim-airline/vim-airline-themes
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 
-leg g:airline_theme='bubblegum'
+let g:airline_theme='bubblegum'
 
 "set term=xterm-256color
 set t_Co=256
@@ -136,5 +136,5 @@ let g:ale_fixers = {
 	\ 'js',
 	\ 'mjs'
 	\]
-	
+
 set completeopt-=preview
