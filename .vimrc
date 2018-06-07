@@ -111,6 +111,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Remove filthy whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
+let b:ale_linters = ['flake8', 'pylint']
+let b:ale_fixers = ['autopep8', 'yapf']
+
 " ALE autocomplete
 let g:ale_fixers = {
       \   'javascript': ['eslint'],
