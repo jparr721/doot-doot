@@ -9,11 +9,14 @@
   export NODE_ENV=development
 
   export TESSDATA_PREFIX=/usr/share/tessdata
+  export GOPATH=$HOME/go
+  export GOROOT=$HOME/go
+  export PATH=$PATH:$GOROOT/bin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="arrow"
+ZSH_THEME="windows"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -106,7 +109,9 @@ alias sleep='systemctl suspend'
 alias poly-reload='polybar -r mybar'
 alias wifi='nmcli dev wifi con'
 alias sec='cd ~/Infosec'
+alias ml='cd ~/ML'
 alias resin='sudo systemctl start dhcpcd'
+alias yak='cd ~/yakyak && ./yakyak &'
 
 source /usr/share/nvm/init-nvm.sh
 
