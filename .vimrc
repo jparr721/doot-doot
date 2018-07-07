@@ -18,14 +18,17 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call plug#end()
+
 let g:deoplete#enable_at_startup = 1
 
+" Airline theme
 let g:airline_theme='bubblegum'
 
-"set term=xterm-256color
-set t_Co=256
+"set term=xterm-<t_co>color
+set t_Co=<t_co>
 set encoding=utf-8
 "set laststatus=2
 
@@ -56,58 +59,36 @@ let g:go_disable_autoinstall = 0
 let g:go_fmt_command = "goimports"
 
 " turn highlighting on
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_type_info = 1
 
-let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 let g:powerline_pycmd="py3"
 
 " Open go doc in vertical window, horizontal, or tab
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
-let g:rustfmt_autosave = 1
+
+" Make it work with airline and be pretty
+" Error and warning signs.
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '⚠'
+
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
 
 " Airline
 let g:airline_powerline_fonts = 1
-
-" tagbar
-nmap <F1> :TagbarToggle<CR>
-
-" ctags
-let g:tagbar_type_go = {
-		\ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-	\ }
 
 " Ctrl-p
 let g:ctrlp_map = '<c-p>'
@@ -138,3 +119,4 @@ let g:ale_fixers = {
 	\]
 
 set completeopt-=preview
+
