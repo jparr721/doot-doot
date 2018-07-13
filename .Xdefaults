@@ -31,7 +31,7 @@
 
 urxvt.scrollBar: false
 !urxvt*font: xft:Dina:size=30
-urxvt*font: xft:Envy Code R:size=11
+urxvt*font: xft:Envy Code R:size=10
 
 urxvt.perl-ext-common: default,matcher,selection-to-clipboard
 
