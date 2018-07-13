@@ -19,6 +19,7 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'lervag/vimtex'
 
 call plug#end()
 
