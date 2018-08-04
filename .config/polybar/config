@@ -10,7 +10,7 @@
 [colors]
 
 ! hard contrast: *background: #1d2021
-background = #30336b
+background = #333333
 ! soft contrast: *background: #32302f
 foreground = #ecf0f1
 ! Black + DarkGrey
@@ -41,8 +41,8 @@ color15 = #ebdbb2
 [bar/mybar]
 width = 100%
 height = 27
-fixed-center = true 
-bottom = true
+fixed-center = true
+bottom = false
 
 monitor = ${env:MONITOR:}
 
@@ -59,30 +59,75 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Ubuntu Mono:size=10;2"
-font-1 = FontAwesome:pixelsize=10;2 
+font-1 = FontAwesome:pixelsize=10;2
 font-2 = siji:pixelsize=10
 font-3 = unifont:fontformat=truetype:size=8:antialias=false
 
-modules-left = i3
-modules-center = xwindow
-modules-right = weather date powermenu
+modules-left = i3 cpu
+modules-center = date
+; xwindow
+modules-right = temperature weather powermenu
 
 tray-position = right
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
+[module/cpu]
+type = internal/cpu
+
+interval = 0.5
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label> <ramp-coreload>
+
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = CPU %percentage%%
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
 [module/weather]
 type = custom/script
 interval = 1800
 format = <label>
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.foreground}
 exec = ~/.config/polybar/weather
 
 [module/xwindow]
 type = internal/xwindow
 label = %title%
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
+warn-temperature = 50
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
 
 [module/i3]
 type = internal/i3
@@ -100,13 +145,13 @@ enable-scroll = true
 ; Default: true
 wrapping-scroll = false
 
-; Set the scroll cycle direction 
+; Set the scroll cycle direction
 ; Default: true
 reverse-scroll = true
 
-; Use fuzzy (partial) matching on labels when assigning 
+; Use fuzzy (partial) matching on labels when assigning
 ; icons to workspaces
-; Example: code;♚ will apply the icon to all workspaces 
+; Example: code;♚ will apply the icon to all workspaces
 ; containing 'code' in the label
 ; Default: false
 fuzzy-match = true
@@ -185,7 +230,7 @@ format-spacing = 1
 
 label-open = 
 label-open-foreground = ${colors.foreground}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.color1}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
@@ -194,33 +239,23 @@ menu-0-0 = reboot
 menu-0-0-exec = menu-open-1
 menu-0-1 = power off
 menu-0-1-exec = menu-open-2
+menu-0-2 = sleep
+menu-0-2-exec = menu-option-3
 
 menu-1-0 = cancel
 menu-1-0-exec = menu-open-0
 menu-1-1 = reboot
 menu-1-1-exec = systemctl reboot; mode "default"
 
-menu-2-0 = power off
+menu-2-0 = SHUT IT DOWN
 menu-2-0-exec = systemctl poweroff; mode "default"
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
 
-[module/temperature]
-type = internal/temperature
-
-interval = 0.5
-
-thermal-zone = 0
-
-hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp1_input
-
-warn-temperature = 50
-
-label = TEMP %temperature%
-
-format = <ramp> <label>
-
-units = true
+menu-3-0 = sleep
+menu-3-0-exec = systemctl suspend; mode "default"
+menu-3-1 = cancel
+menu-3-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
@@ -229,6 +264,3 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
-
-
-
