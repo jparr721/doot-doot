@@ -16,10 +16,14 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'lervag/vimtex'
+Plug 'leafgarland/typescript-vim'
+Plug 'srcery-colors/srcery-vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'vim-latex/vim-latex'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -28,10 +32,8 @@ let g:deoplete#enable_at_startup = 1
 " Airline theme
 let g:airline_theme='bubblegum'
 
-"set term=xterm-<t_co>color
-set t_Co=<t_co>
+set t_Co=256
 set encoding=utf-8
-"set laststatus=2
 
 set nocompatible
 set cindent
@@ -50,11 +52,14 @@ map<C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 
-colorscheme palenight
+colorscheme deus
 set background=dark
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
 
 " use goimports for formatting
 let g:go_fmt_command = "goimports"
