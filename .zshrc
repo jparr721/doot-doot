@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -al --color=auto'
 alias home='cd ~/Desktop'
+alias work='cd ~/Work'
 alias code='cd ~/Code'
 alias lock='~/lock.sh'
 alias sleep='systemctl suspend'
@@ -112,6 +113,7 @@ alias sec='cd ~/Infosec'
 alias ml='cd ~/ML'
 alias resin='sudo systemctl start dhcpcd'
 alias yak='cd ~/yakyak && ./yakyak &'
+alias dl='cd ~/Downloads'
 
 source /usr/share/nvm/init-nvm.sh
 
