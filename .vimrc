@@ -20,7 +20,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'lervag/vimtex'
 Plug 'leafgarland/typescript-vim'
-Plug 'srcery-colors/srcery-vim'
+Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-latex/vim-latex'
 Plug 'rust-lang/rust.vim'
@@ -53,7 +53,6 @@ map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 
 colorscheme deus
-set background=dark
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
@@ -123,6 +122,10 @@ let g:ale_fixers = {
 	\ 'js',
 	\ 'mjs'
 	\]
+	
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 set completeopt-=preview
 
