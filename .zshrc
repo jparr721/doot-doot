@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/lotus/.oh-my-zsh
+  export ZSH=/home/hermes/.oh-my-zsh
 
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
@@ -12,11 +12,14 @@
   export GOPATH=$HOME/go
   export GOROOT=$HOME/go
   export PATH=$PATH:$GOROOT/bin
+  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
+  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
+  export R_ENVIRON=/etc/R
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="windows"
+ZSH_THEME="love"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -104,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 alias ll='ls -al --color=auto'
 alias home='cd ~/Desktop'
 alias code='cd ~/Code'
-alias lock='~/lock.sh'
+alias lock='systemctl hibernate'
 alias sleep='systemctl suspend'
 alias poly-reload='polybar -r mybar'
 alias wifi='nmcli dev wifi con'
@@ -112,8 +115,11 @@ alias sec='cd ~/Infosec'
 alias ml='cd ~/ML'
 alias resin='sudo systemctl start dhcpcd'
 alias yak='cd ~/yakyak && ./yakyak &'
+alias work='cd ~/Work'
+alias nightmode='redshift -O 4000'
 
 source /usr/share/nvm/init-nvm.sh
 
 # Fix annoying ctrl-s shit
 stty -ixon
+

@@ -20,6 +20,12 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'lervag/vimtex'
+Plug 'ryanoasis/vim-devicons'
+Plug 'erichdongubler/vim-sublime-monokai'
+Plug 'crusoexia/vim-monokai'
+Plug 'leafgarland/typescript-vim'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'ajmwagar/vim-deus'
 
 call plug#end()
 
@@ -28,10 +34,8 @@ let g:deoplete#enable_at_startup = 1
 " Airline theme
 let g:airline_theme='bubblegum'
 
-"set term=xterm-<t_co>color
-set t_Co=<t_co>
+set t_Co=256
 set encoding=utf-8
-"set laststatus=2
 
 set nocompatible
 set cindent
@@ -50,8 +54,7 @@ map<C-l> <C-w>l
 map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 
-colorscheme palenight
-set background=dark
+colorscheme deus
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
@@ -80,7 +83,7 @@ au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 " Make it work with airline and be pretty
 " Error and warning signs.
 let g:ale_sign_error = 'x'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_warning = '?'
 
 " Enable integration with airline.
 let g:airline#extensions#ale#enabled = 1
@@ -112,12 +115,16 @@ let g:ale_fixers = {
  let g:deoplete#enable_at_startup = 1
  let g:deoplete#sources#ternjs#docs = 1
  let g:deoplete#sources#ternjs#filetypes = [
- 	\ 'jsx',
-	\ 'javascript.jsx',
-	\ 'vue',
-	\ 'js',
-	\ 'mjs'
-	\]
+  \ 'jsx',
+  \ 'javascript.jsx',
+  \ 'vue',
+  \ 'js',
+  \ 'mjs'
+  \]
+
+ let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
 
 set completeopt-=preview
 
