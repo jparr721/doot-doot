@@ -16,16 +16,16 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'lervag/vimtex'
 Plug 'ryanoasis/vim-devicons'
 Plug 'erichdongubler/vim-sublime-monokai'
 Plug 'crusoexia/vim-monokai'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ajmwagar/vim-deus'
+Plug 'vim-latex/vim-latex'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -58,6 +58,9 @@ colorscheme deus
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf, aux'
 
 " use goimports for formatting
 let g:go_fmt_command = "goimports"
@@ -123,6 +126,8 @@ let g:ale_fixers = {
   \]
 
  let g:typescript_indent_disable = 1
+
+let g:typescript_indent_disable = 1
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 

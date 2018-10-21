@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -al --color=auto'
 alias home='cd ~/Desktop'
+alias work='cd ~/Work'
 alias code='cd ~/Code'
 alias lock='systemctl hibernate'
 alias sleep='systemctl suspend'
@@ -117,6 +118,7 @@ alias resin='sudo systemctl start dhcpcd'
 alias yak='cd ~/yakyak && ./yakyak &'
 alias work='cd ~/Work'
 alias nightmode='redshift -O 4000'
+alias dl='cd ~/Downloads'
 
 source /usr/share/nvm/init-nvm.sh
 
