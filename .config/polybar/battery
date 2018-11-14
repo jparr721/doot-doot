@@ -1,3 +1,41 @@
-#!/bin/bash
+#!/bin/python
+import os
 
-acpi | cut -c 12-37
+charging = os.popen('acpi').read()
+charge = False
+full = False
+if 'Discharging' in charging:
+    charge = False
+elif 'charged' in charging:
+    charge = True
+elif 'Full' in charging:
+    full = True
+    charge = False
+else:
+    charge = False
+
+percent = None
+if charge == False and full == False:
+    percent = os.popen('acpi | cut -c 25-26').read()
+    percent = int(percent)
+elif charge == True and full == False:
+    percent = os.popen('acpi | cut -c 22-23').read()
+    percent = int(percent)
+else:
+    percent = os.popen('acpi | cut -c 12-15').read()
+
+if charge == False and full == False:
+    if percent <= 100 and percent >= 90:
+        print(' {}'.format(percent))
+    elif percent <= 89 and percent >= 80:
+        print(' {}'.format(percent))
+    elif percent <= 79 and percent >= 50:
+        print(' {}'.format(percent))
+    elif percent <= 49 and percent >= 15:
+        print(' {}'.format(percent))
+    elif percent <= 14:
+        print('LOW {}'.format(percent))
+elif full == True:
+    print(' {}'.format(percent))
+else:
+    print(' {}'.format(percent))
