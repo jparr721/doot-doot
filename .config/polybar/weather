@@ -1,10 +1,20 @@
 #!/bin/python
 import requests
 
-r = requests.get("http://api.wunderground.com/api/d0504b212b9495e7/conditions/q/us/mi/allendale.json")
 
-info = r.json()
-weather = info["current_observation"]["weather"]
-temp = info["current_observation"]["temp_f"]
+def get_wifi():
+    try:
+        r = requests.get('http://api.wunderground.com/api/d0504b212b9495e7/'
+                         'conditions/q/us/mi/allendale.json')
+    except TimeoutError:
+        print('No WiFi playa')
+        return
 
-print(weather, str(temp) + "°F")
+    info = r.json()
+    weather = info["current_observation"]["weather"]
+    temp = info["current_observation"]["temp_f"]
+
+    print(weather, str(temp) + "°F")
+
+
+get_wifi()
