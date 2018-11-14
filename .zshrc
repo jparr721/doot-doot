@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/hermes/.oh-my-zsh
+  export ZSH=/home/lotus/.oh-my-zsh
 
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
@@ -119,6 +119,7 @@ alias yak='cd ~/yakyak && ./yakyak &'
 alias work='cd ~/Work'
 alias nightmode='redshift -O 4000'
 alias dl='cd ~/Downloads'
+alias vi='vim'
 
 source /usr/share/nvm/init-nvm.sh
 
