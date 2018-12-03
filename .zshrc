@@ -7,6 +7,7 @@
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
   export NODE_ENV=development
+  export TERM=xterm-color
 
   export TESSDATA_PREFIX=/usr/share/tessdata
   export GOPATH=$HOME/go
