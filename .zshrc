@@ -9,9 +9,9 @@
   export NODE_ENV=development
 
   export TESSDATA_PREFIX=/usr/share/tessdata
-  export GOPATH=$HOME/go
-  export GOROOT=$HOME/go
-  export PATH=$PATH:$GOROOT/bin
+  export GOROOT=/usr/lib/go
+  export GOPATH=$HOME/Code/go
+  export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
   export R_ENVIRON=/etc/R
