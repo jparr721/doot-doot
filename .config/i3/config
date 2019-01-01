@@ -40,7 +40,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -139,10 +139,10 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+o exec "i3-nagbar -t warning -m 'Bye, lmao' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+Shift+x exec ~/lock.sh
+bindsym $mod+Shift+x exec i3lock -c 000000
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -235,8 +235,7 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
-bindsym $mod+w exec "/usr/bin/firefox"
-bindsym $mod+n exec "/usr/bin/thunar"
+bindsym $mod+w exec "/usr/bin/google-chrome-stable"
 
 # Redirect sound to headphones
 bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
@@ -249,7 +248,7 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 5s && kalu"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always feh --bg-fill /home/lotus/Pictures/retro_sunset.jpg
+exec_always feh --bg-fill /home/lotus/Pictures/space.jpg
 exec_always "compton -f"
 
 # i3 Gaps
@@ -257,6 +256,6 @@ gaps inner 15
 gaps outer 10
 
 # Remove window title
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 exec redshift
 
