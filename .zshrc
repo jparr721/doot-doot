@@ -14,8 +14,7 @@
   export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
-  export R_ENVIRON=/etc/R
-  export BOOST_LIBRARYDIR="/usr/include/boost"
+  export TERM=xterm-color
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -121,6 +120,7 @@ alias work='cd ~/Work'
 alias nightmode='redshift -O 4000'
 alias dl='cd ~/Downloads'
 alias vi='vim'
+alias tmux='tmux -2'
 
 source /usr/share/nvm/init-nvm.sh
 
