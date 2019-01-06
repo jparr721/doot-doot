@@ -1,5 +1,27 @@
 #!/bin/python
 import requests
+import time
+
+
+def get_wifi_retry():
+    count = 0
+    max_retry = 10
+    r = None
+    while count < max_retry:
+        try:
+            r = requests.get('http://api.wunderground.com/api/d0504b212b9495e7/'
+                             'conditions/q/us/mi/allendale.json')
+            break
+        except requests.exceptions.RequestException:
+            time.sleep(2**count)
+            count += 1
+            if count >= max_retry:
+                print('Failed')
+                break
+    info = r.json()
+    weather = info["current_observation"]["weather"]
+    temp = info["current_observation"]["temp_f"]
+    print(weather, str(temp) + "°F")
 
 
 def get_wifi():
@@ -17,4 +39,5 @@ def get_wifi():
     print(weather, str(temp) + "°F")
 
 
-get_wifi()
+# get_wifi()
+get_wifi_retry()
