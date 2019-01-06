@@ -53,6 +53,7 @@ map <C-n> :NERDTreeToggle<CR>
 set backspace=indent,eol,start
 
 colorscheme deus
+set background=dark
 filetype plugin on
 
 let g:go_disable_autoinstall = 0
