@@ -73,6 +73,7 @@ font-3 = unifont:fontformat=truetype:size=8:antialias=false
 
 [bar/mybar]
 inherit = section/base
+background = #00000000
 modules-left = i3 cpu
 modules-center = date
 modules-right = alsa pulseaudio temperature weather powermenu
@@ -81,11 +82,12 @@ scroll-down = i3wm-wsprev
 
 [bar/main-bottom]
 inherit = section/base
+background = #00000000
 bottom = true
 width = 20%
 offset-x = 40%
 modules-left =
-modules-center = wlan eth eth-up eth-down cpu-module memory-module battery
+modules-center = eth eth-up eth-down cpu-module memory-module
 modules-right =
 override-redirect = true
 
@@ -276,7 +278,7 @@ label = %date%    %time%
 type = internal/cpu
 label-active-font = 2
 interval = 2
-format-prefix = ""
+format-prefix = " "
 format-prefix-foreground = ${root.foreground}
 format-underline = #f90000
 label = %percentage:2%%
@@ -285,14 +287,14 @@ label = %percentage:2%%
 type = internal/memory
 label-active-font = 2
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${root.foreground}
 format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = enp30s0
 interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -308,7 +310,7 @@ ramp-signal-foreground = #ffffff
 
 [module/eth]
 type = internal/network
-interface = wlp2s0
+interface = enp30s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
@@ -317,7 +319,7 @@ label-connected = %local_ip%
 format-disconnected =
 [module/eth-up]
 type = internal/network
-interface = wlp2s0
+interface = enp30s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
@@ -326,7 +328,7 @@ label-connected =  %upspeed%
 format-disconnected =
 [module/eth-down]
 type = internal/network
-interface = wlps20
+interface = enp30s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
