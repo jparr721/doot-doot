@@ -2,13 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/scrooloose/nerdtree.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/w0rp/ale.git'
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 Plug 'https://github.com/yuttie/comfortable-motion.vim.git'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
@@ -17,8 +10,6 @@ Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
 Plug 'vim-airline/vim-airline-themes'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'ryanoasis/vim-devicons'
 Plug 'erichdongubler/vim-sublime-monokai'
 Plug 'crusoexia/vim-monokai'
 Plug 'leafgarland/typescript-vim'
@@ -27,6 +18,12 @@ Plug 'ajmwagar/vim-deus'
 Plug 'vim-latex/vim-latex'
 Plug 'rust-lang/rust.vim'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'vim-erlang/vim-erlang-omnicomplete'
+Plug 'vim-erlang/vim-erlang-compiler'
+Plug 'elixir-editors/vim-elixir'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 

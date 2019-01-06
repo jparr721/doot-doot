@@ -10,13 +10,14 @@
   export TERM=xterm-color
 
   export TESSDATA_PREFIX=/usr/share/tessdata
-  export GOPATH=$HOME/go
-  export GOROOT=$HOME/go
-  export PATH=$PATH:$GOROOT/bin
+  export GOROOT=/usr/lib/go
+  export GOPATH=$HOME/Code/go
+  export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
   export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
   export R_ENVIRON=/etc/R
   export BOOST_LIBRARYDIR="/usr/include/boost"
+  export SLUGIFY_USES_TEXT_UNIDECODE=yes
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -121,6 +122,7 @@ alias yak='cd ~/yakyak && ./yakyak &'
 alias work='cd ~/Work'
 alias nightmode='redshift -O 4000'
 alias dl='cd ~/Downloads'
+alias vi='vim'
 
 source /usr/share/nvm/init-nvm.sh
 
