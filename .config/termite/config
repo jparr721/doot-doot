@@ -3,7 +3,7 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 9
+font = Monospace 11
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
@@ -78,7 +78,7 @@ scrollback_lines = 10000
 ##background = #3f3f3f
 ##active_foreground = #e68080
 ##active_background = #3f3f3f
-##padding = 2
+padding = 2
 ##border = #3f3f3f
 ##border_width = 0.5
 ##roundness = 2.0
@@ -87,39 +87,39 @@ scrollback_lines = 10000
 [colors]
 
 # special
-foreground      = #f8f8f2
+foreground      = #C5C8C6
 foreground_bold = #f8f8f2
 cursor          = #f8f8f2
-background      = #272822
+background      = #1D1F21
 
 # black
-color0  = #272822
-color8  = #75715e
+color0  = #282A2E
+color8  = #373B41
 
 # red
-color1  = #f92672
-color9  = #f92672
+color1  = #A54242
+color9  = #CC6666
 
 # green
-color2  = #a6e22e
-color10 = #a6e22e
+color2  = #8C9440
+color10 = #B5BD68
 
 # yellow
-color3  = #f4bf75
-color11 = #f4bf75
+color3  = #DE935F
+color11 = #F0C674
 
 # blue
-color4  = #66d9ef
-color12 = #66d9ef
+color4  = #5F819D
+color12 =  #81A2BE
 
 # magenta
-color5  = #ae81ff
-color13 = #ae81ff
+color5  = #85678F
+color13 =  #B294BB
 
 # cyan
-color6  = #a1efe4
-color14 = #a1efe4
+color6  = #5E8D87
+color14 =  #8ABEB7
 
 # white
-color7  = #f8f8f2
-color15 = #f9f8f5
+color7  =  #707880
+color15 =   #C5C8C6
