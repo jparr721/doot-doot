@@ -76,7 +76,7 @@ inherit = section/base
 background = #00000000
 modules-left = i3 cpu
 modules-center = date
-modules-right = alsa pulseaudio temperature weather powermenu
+modules-right = alsa pulseaudio temperature powermenu
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -167,7 +167,7 @@ label = %title%
 type = internal/temperature
 interval = 0.5
 thermal-zone = 0
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
 warn-temperature = 50
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
@@ -294,7 +294,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = enp30s0
+interface = enp7s0
 interval = 3.0
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -310,7 +310,7 @@ ramp-signal-foreground = #ffffff
 
 [module/eth]
 type = internal/network
-interface = enp30s0
+interface = enp7s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
@@ -319,7 +319,7 @@ label-connected = %local_ip%
 format-disconnected =
 [module/eth-up]
 type = internal/network
-interface = enp30s0
+interface = enp7s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "
@@ -328,7 +328,7 @@ label-connected =  %upspeed%
 format-disconnected =
 [module/eth-down]
 type = internal/network
-interface = enp30s0
+interface = enp7s0
 interval = 3.0
 format-connected-underline = #55aa55
 ;format-connected-prefix = " "

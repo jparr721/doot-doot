@@ -10,20 +10,14 @@ Plug 'https://github.com/cocopon/iceberg.vim.git'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm i -g tern' }
 Plug 'vim-airline/vim-airline-themes'
-Plug 'erichdongubler/vim-sublime-monokai'
-Plug 'crusoexia/vim-monokai'
 Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'vim-latex/vim-latex'
 Plug 'rust-lang/rust.vim'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'vim-erlang/vim-erlang-omnicomplete'
-Plug 'vim-erlang/vim-erlang-compiler'
-Plug 'elixir-editors/vim-elixir'
 Plug 'Valloric/YouCompleteMe'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -63,17 +57,6 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 
 " use goimports for formatting
 let g:go_fmt_command = "goimports"
-
-" turn highlighting on
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_types = 1
-let g:go_auto_type_info = 1
 
 let g:powerline_pycmd="py3"
 
@@ -132,11 +115,4 @@ let g:typescript_compiler_options = ''
 
 set completeopt-=preview
 
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
-
+let g:go_bin_path = $HOME."/Code/go/bin"

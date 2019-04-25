@@ -2,22 +2,22 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/lotus/.oh-my-zsh
+export ZSH=/home/ghost/.oh-my-zsh
 
 # Change path to have vim as default editor
-  export EDITOR=/usr/bin/vim
-  export NODE_ENV=development
-  export TERM=xterm-color
+export EDITOR=/usr/bin/vim
+export NODE_ENV=development
+export TERM=xterm-color
 
-  export TESSDATA_PREFIX=/usr/share/tessdata
-  export GOROOT=/usr/lib/go
-  export GOPATH=$HOME/Code/go
-  export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
-  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
-  export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
-  export BOOST_LIBRARYDIR="/usr/include/boost"
-  export SLUGIFY_USES_TEXT_UNIDECODE=yes
-  export TERM=xterm-color
+export TESSDATA_PREFIX=/usr/share/tessdata
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/Code/go
+export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
+export BOOST_LIBRARYDIR="/usr/include/boost"
+export TERM=xterm-color
+export PATH=$PATH:/home/ghost/.local/bin
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -125,8 +125,25 @@ alias dl='cd ~/Downloads'
 alias vi='vim'
 alias tmux='tmux -2'
 
-source /usr/share/nvm/init-nvm.sh
-
 # Fix annoying ctrl-s shit
 stty -ixon
+
+source /home/ghost/.cargo/env
+eval
+            fuck () {
+                TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+                export TF_SHELL=zsh;
+                export TF_ALIAS=fuck;
+                TF_SHELL_ALIASES=$(alias);
+                export TF_SHELL_ALIASES;
+                TF_HISTORY="$(fc -ln -10)";
+                export TF_HISTORY;
+                export PYTHONIOENCODING=utf-8;
+                TF_CMD=$(
+                    thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+                ) && eval $TF_CMD;
+                unset TF_HISTORY;
+                export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+                test -n "$TF_CMD" && print -s $TF_CMD
+            }
 

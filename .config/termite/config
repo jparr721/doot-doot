@@ -3,7 +3,7 @@
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Monospace 11
+font = Hack 9
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
@@ -85,41 +85,25 @@ padding = 2
 
 ## vim: ft=dosini cms=#%s
 [colors]
-
-# special
-foreground      = #C5C8C6
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
-background      = #1D1F21
-
-# black
-color0  = #282A2E
-color8  = #373B41
-
-# red
-color1  = #A54242
-color9  = #CC6666
-
-# green
-color2  = #8C9440
-color10 = #B5BD68
-
-# yellow
-color3  = #DE935F
-color11 = #F0C674
-
-# blue
-color4  = #5F819D
-color12 =  #81A2BE
-
-# magenta
-color5  = #85678F
-color13 =  #B294BB
-
-# cyan
-color6  = #5E8D87
-color14 =  #8ABEB7
-
-# white
-color7  =  #707880
-color15 =   #C5C8C6
+background = "#1e1e1e"
+cursor = "#bbbbbb"
+foreground = "#e6d4a3"
+color0 = #161819
+color1 = #f73028
+color2 = #aab01e
+color3 = #f7b125
+color4 = #719586
+color5 = #c77089
+color6 = #7db669
+color7 = #faefbb
+color8 = #7f7061
+color9 = #be0f17
+color10 = #868715
+color11 = #cc881a
+color12 = #377375
+color13 = #a04b73
+color14 = #578e57
+color15 = #e6d4a3
+colorBD = #978771
+colorIT =
+colorUL =
