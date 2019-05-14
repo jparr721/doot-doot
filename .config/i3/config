@@ -248,7 +248,7 @@ exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id "sleep 5s && kalu"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always feh --bg-fill /home/lotus/Pictures/space.jpg
+exec_always feh --bg-fill /home/ghost/Pictures/space.jpg
 exec_always "compton -f"
 
 # i3 Gaps
