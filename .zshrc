@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+<<<<<<< HEAD
   export ZSH=/home/hermes/.oh-my-zsh
 
 # Change path to have vim as default editor
@@ -19,6 +20,24 @@
   export SLUGIFY_USES_TEXT_UNIDECODE=yes
   export TERM=xterm-color
   export PATH=$PATH:~/.local/bin
+=======
+export ZSH=/home/ghost/.oh-my-zsh
+
+# Change path to have vim as default editor
+export EDITOR=/usr/bin/vim
+export NODE_ENV=development
+export TERM=xterm-color
+
+export TESSDATA_PREFIX=/usr/share/tessdata
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/Code/go
+export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python3.7m/"
+export CPLUS_INCLUDE_PATH="$CPLUS_INCLUDE_PATH:/usr/include/python2.7/"
+export BOOST_LIBRARYDIR="/usr/include/boost"
+export TERM=xterm-color
+export PATH=$PATH:/home/ghost/.local/bin
+>>>>>>> e944a272de5e72aa68cc71d3e31c01dc143576ac
 
 ZSH_THEME="alpha"
 
@@ -126,10 +145,14 @@ alias tmux='tmux -2'
 # Fix annoying ctrl-s shit
 stty -ixon
 
+<<<<<<< HEAD
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+=======
+source /home/ghost/.cargo/env
+>>>>>>> e944a272de5e72aa68cc71d3e31c01dc143576ac
 eval
             fuck () {
                 TF_PYTHONIOENCODING=$PYTHONIOENCODING;
