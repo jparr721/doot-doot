@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/lotus/.oh-my-zsh
+  export ZSH=/home/hermes/.oh-my-zsh
 
 # Change path to have vim as default editor
   export EDITOR=/usr/bin/vim
@@ -18,11 +18,9 @@
   export BOOST_LIBRARYDIR="/usr/include/boost"
   export SLUGIFY_USES_TEXT_UNIDECODE=yes
   export TERM=xterm-color
+  export PATH=$PATH:~/.local/bin
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="love"
+ZSH_THEME="alpha"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -125,8 +123,28 @@ alias dl='cd ~/Downloads'
 alias vi='vim'
 alias tmux='tmux -2'
 
-source /usr/share/nvm/init-nvm.sh
-
 # Fix annoying ctrl-s shit
 stty -ixon
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval
+            fuck () {
+                TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+                export TF_SHELL=zsh;
+                export TF_ALIAS=fuck;
+                TF_SHELL_ALIASES=$(alias);
+                export TF_SHELL_ALIASES;
+                TF_HISTORY="$(fc -ln -10)";
+                export TF_HISTORY;
+                export PYTHONIOENCODING=utf-8;
+                TF_CMD=$(
+                    thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+                ) && eval $TF_CMD;
+                unset TF_HISTORY;
+                export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+                test -n "$TF_CMD" && print -s $TF_CMD
+            }
 
