@@ -76,7 +76,7 @@ inherit = section/base
 background = #00000000
 modules-left = i3 cpu
 modules-center = date
-modules-right = alsa pulseaudio temperature powermenu
+modules-right = alsa pulseaudio temperature1 temperature2 temperature3 temperature4 temperature5 temperature6 temperature7 temperature8 powermenu
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
@@ -163,14 +163,15 @@ exec = ~/.config/polybar/battery
 type = internal/xwindow
 label = %title%
 
-[module/temperature]
+
+[module/temperature1]
 type = internal/temperature
 interval = 0.5
 thermal-zone = 0
-/hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp2_input
 warn-temperature = 50
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
+format = 1: <ramp> <label>
+format-warn = 1: <ramp> <label-warn>
 format-prefix-foreground = ${colors.foreground}
 label = %temperature%
 label-warn = %temperature% 
@@ -180,6 +181,140 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground}
+
+
+[module/temperature2]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp3_input
+warn-temperature = 50
+format = 2: <ramp> <label>
+format-warn = 2: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature3]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp4_input
+warn-temperature = 50
+format = 3: <ramp> <label>
+format-warn = 3: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature4]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp5_input
+warn-temperature = 50
+format = 4: <ramp> <label>
+format-warn = 4: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature5]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp6_input
+warn-temperature = 50
+format = 5: <ramp> <label>
+format-warn = 5: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature6]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp7_input
+warn-temperature = 50
+format = 6: <ramp> <label>
+format-warn = 6: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature7]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp8_input
+warn-temperature = 50
+format = 7: <ramp> <label>
+format-warn = 7: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
+
+[module/temperature8]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp9_input
+warn-temperature = 50
+format = 8: <ramp> <label>
+format-warn = 8: <ramp> <label-warn>
+format-prefix-foreground = ${colors.foreground}
+label = %temperature%
+label-warn = %temperature% 
+label-warn-foreground = #f00
+units = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground}
+
 
 [module/i3]
 type = internal/i3
