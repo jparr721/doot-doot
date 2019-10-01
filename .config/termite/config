@@ -53,94 +53,27 @@ scrollback_lines = 10000
 
 ## If unset, will reverse foreground and background
 #highlight = #2f2f2f
-
-## Colors from color0 to color254 can be set
-#color0 = #3f3f3f
-#color1 = #e04e4e
-#color2 = #60b48a
-#color3 = #dfaf8f
-#color4 = #506070
-#color5 = #dc8cc3
-#color6 = #8cd0d3
-#color7 = #dcdccc
-#color8 = #709080
-#color9 = #dca3a3
-#color10 = #c3bf9f
-#color11 = #f0dfaf
-#color12 = #94bff3
-#color13 = #ec93d3
-#color14 = #93e0e3
-#color15 = #ffffff
-
-#[hints]
-##font = Monospace 12
-##foreground = #dcdccc
-##background = #3f3f3f
-##active_foreground = #e68080
-##active_background = #3f3f3f
-# padding = 2
-##border = #3f3f3f
-##border_width = 0.5
-##roundness = 2.0
-
-## vim: ft=dosini cms=#%s
-# [colors]
-
-# # special
-# foreground      = #C5C8C6
-# foreground_bold = #f8f8f2
-# cursor          = #f8f8f2
-# background      = #1D1F21
-
-# # black
-# color0  = #282A2E
-# color8  = #373B41
-
-# # red
-# color1  = #A54242
-# color9  = #CC6666
-
-# # green
-# color2  = #8C9440
-# color10 = #B5BD68
-
-# # yellow
-# color3  = #DE935F
-# color11 = #F0C674
-
-# # blue
-# color4  = #5F819D
-# color12 =  #81A2BE
-
-# # magenta
-# color5  = #85678F
-# color13 =  #B294BB
-
-# # cyan
-# color6  = #5E8D87
-# color14 =  #8ABEB7
-
-# # white
-# color7  =  #707880
-# color15 =   #C5C8C6
+#
 [colors]
-background = "#262626"
-cursor = "#fc531d"
-foreground = "#ffcb83"
-color0 = #000000
-color1 = #c13900
-color2 = #a4a900
-color3 = #caaf00
-color4 = #bd6d00
-color5 = #fc5e00
-color6 = #f79500
-color7 = #ffc88a
-color8 = #6a4f2a
-color9 = #ff8c68
-color10 = #f6ff40
-color11 = #ffe36e
-color12 = #ffbe55
-color13 = #fc874f
-color14 = #c69752
-color15 = #fafaff
-colorBD = #fafaff
+background = #1f1d45
+cursor = #efbf38
+foreground = #f8dcc0
+color0 = #050404
+color1 = #bd0013
+color2 = #4ab118
+color3 = #e7741e
+color4 = #0f4ac6
+color5 = #665993
+color6 = #70a598
+color7 = #f8dcc0
+color8 = #4e7cbf
+color9 = #fc5f5a
+color10 = #9eff6e
+color11 = #efc11a
+color12 = #1997c6
+color13 = #9b5953
+color14 = #c8faf4
+color15 = #f6f5fb
+colorBD = #bd0013
+colorIT =
+colorUL =

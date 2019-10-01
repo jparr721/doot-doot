@@ -18,9 +18,56 @@ Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'Valloric/YouCompleteMe'
 Plug 'rhysd/vim-clang-format'
+Plug 'szymonmaszke/vimpyter'
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+Plug 'junegunn/goyo.vim'
+Plug 'ambv/black'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+" Use system clipboard
+set clipboard=unnamedplus
+
+" Prettier config
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql,*.ts PrettierAsync
+
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  " autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer prettier
+  autocmd FileType java AutoFormatBuffer google-java-format
+  " autocmd FileType python AutoFormatBuffer black
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+  " autocmd FileType vue AutoFormatBuffer prettier
+augroup END
+
+" Turn on Deoplete at startup
 let g:deoplete#enable_at_startup = 1
 
 " Airline theme
@@ -50,13 +97,17 @@ colorscheme deus
 set background=dark
 filetype plugin on
 
-let g:go_disable_autoinstall = 0
+" Vim-Latex
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
 
-" use goimports for formatting
+" Vim-go
 let g:go_fmt_command = "goimports"
+let g:go_bin_path = $HOME."/Code/go/bin"
+
+" Vim-rust
+let g:rustfmt_autsoave = 1
 
 let g:powerline_pycmd="py3"
 
@@ -64,6 +115,10 @@ let g:powerline_pycmd="py3"
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
 au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+
+" Vim-python
+autocmd BufWritePost *.py silent! execute ':Black'
+let g:black_linelength = 79
 
 " Make it work with airline and be pretty
 " Error and warning signs.
@@ -96,10 +151,10 @@ let g:ale_fixers = {
       \   'javascript': ['eslint'],
       \}
 
- let g:ale_fix_on_save = 1
- let g:deoplete#enable_at_startup = 1
- let g:deoplete#sources#ternjs#docs = 1
- let g:deoplete#sources#ternjs#filetypes = [
+let g:ale_fix_on_save = 1
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filetypes = [
   \ 'jsx',
   \ 'javascript.jsx',
   \ 'vue',
@@ -107,12 +162,11 @@ let g:ale_fixers = {
   \ 'mjs'
   \]
 
- let g:typescript_indent_disable = 1
+" Typescript options
+let g:typescript_indent_disable = 1
 
 let g:typescript_indent_disable = 1
 let g:typescript_compiler_binary = 'tsc'
 let g:typescript_compiler_options = ''
 
 set completeopt-=preview
-
-let g:go_bin_path = $HOME."/Code/go/bin"
