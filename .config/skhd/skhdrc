@@ -1,5 +1,5 @@
 cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
-cmd - w : /Applications/Google\ Chrome.app/Contents/MaxOS/Google\ Chrome
+cmd  + shift - w : /Applications/Google\ Chrome.app/Contents/MaxOS/Google\ Chrome
 
 ctrl - left : yabai -m window --focus west
 ctrl - down : yabai -m window --focus south
@@ -32,5 +32,8 @@ cmd + shift - 7 : yabai -m window --space 7
 cmd + shift - 8 : yabai -m window --space 8
 cmd + shift - 9 : yabai -m window --space 9
 cmd + shift - 0 : yabai -m window --space 10
+
+cmd + alt - n : yabai -m space --create
+cmd + alt - d : yabai -m space --destroy
 
 ctrl - f       : yabai -m window --toggle zoom-fullscreen
