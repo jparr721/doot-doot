@@ -1,0 +1,108 @@
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'w0rp/ale'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-commentary'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ajmwagar/vim-deus'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'ambv/black'
+Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-surround'
+call plug#end()
+
+" Use system clipboard
+set clipboard=unnamed
+
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto AutoFormatBuffer clang-format
+  autocmd FileType html,css,sass,scss,less,json,javascript,typescript AutoFormatBuffer prettier
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer black
+augroup END
+
+" Airline theme
+let g:airline_theme='bubblegum'
+
+set nocompatible
+set cindent
+syntax on
+set ts=2
+set expandtab
+set shiftwidth=2
+set nu
+set rnu
+set smartindent
+set smartcase
+map<C-h> <C-w>h
+map<C-j> <C-w>j
+map<C-k> <C-w>k
+map<C-l> <C-w>l
+map <C-n> :NERDTreeToggle<CR>
+set backspace=indent,eol,start
+
+set background=dark
+colorscheme deus
+filetype plugin on
+
+let g:powerline_pycmd="py3"
+
+" Vim-python
+autocmd BufWritePost *.py silent! execute ':Black'
+let g:black_linelength = 79
+
+" Make it work with airline and be pretty
+" Error and warning signs.
+let g:ale_sign_error = 'x'
+let g:ale_sign_warning = '?'
+
+" Enable integration with airline.
+let g:airline#extensions#ale#enabled = 1
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filetypes = [
+  \ 'jsx',
+  \ 'javascript.jsx',
+  \ 'vue',
+  \ 'js',
+  \ 'mjs'
+  \]
+
+" Airline
+let g:airline_powerline_fonts = 1
+
+" Ctrl-p
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" Remove filthy whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+let b:ale_linters = ['flake8', 'pylint']
+let b:ale_fixers = ['autopep8', 'yapf']
+let g:ale_fix_on_save = 1
+
+" Typescript options
+let g:typescript_indent_disable = 1
+
+let g:typescript_indent_disable = 1
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+
+set completeopt-=preview
