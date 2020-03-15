@@ -42,6 +42,7 @@ alias nightmode='redshift -O 4000'
 alias dl='cd ~/Downloads'
 alias vi='vim'
 alias tmux='tmux -2'
+alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black'
 
 # Fix annoying ctrl-s shit
 stty -ixon

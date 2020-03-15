@@ -40,7 +40,7 @@ let g:coc_global_extensions = [
     \ ]
 
 " Use system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 augroup autoformat_settings
   autocmd!
