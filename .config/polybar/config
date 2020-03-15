@@ -21,7 +21,7 @@
 ! hard contrast: *background: #1d2021
 background = #333333
 ! soft contrast: *background: #32302f
-foreground = #000000
+foreground = #ffffff
 ! Black + DarkGrey
 color0 =  #282828
 color8 =  #928374
