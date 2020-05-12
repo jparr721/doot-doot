@@ -1,5 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
+export DISPLAY=:0
+
 export EDITOR=/usr/bin/vim
 export NODE_ENV=development
 export TERM=xterm-color
@@ -10,13 +12,6 @@ export GOPATH=$HOME/Code/go
 export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
 export TERM=xterm-color
 export PATH=$PATH:/home/abraxas/.local/bin
-
-# Android stuff
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 ZSH_THEME="love"
 
@@ -70,3 +65,5 @@ eval
 
 source $HOME/.cargo/env
 source /usr/share/nvm/init-nvm.sh
+alias notary='echo "# $(date)" >> /home/abraxas/notary.md && echo '' >> /home/abraxas/notary.md && $EDITOR /home/abraxas/notary.md'
+alias notary_rm='rm -rf /home/abraxas/notary.md'
