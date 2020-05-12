@@ -36,11 +36,12 @@ let g:coc_global_extensions = [
     \ 'coc-rust-analyzer',
     \ 'coc-eslint',
     \ 'coc-prettier',
+    \ 'coc-gocode',
     \ 'coc-vimtex'
     \ ]
 
 " Use system clipboard
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 augroup autoformat_settings
   autocmd!
@@ -63,8 +64,9 @@ set expandtab
 set shiftwidth=2
 set nu
 set rnu
-set smartindent
+set smartindent          " match previous indent line
 set smartcase
+set autoread             " auomatically reload files
 
 map<C-h> <C-w>h
 map<C-j> <C-w>j
@@ -118,3 +120,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 """""""""" Rust
 " Rust code style guidelines
 au Filetype rust set colorcolumn=100
+
+"""""""""" Go
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
