@@ -1,0 +1,36 @@
+{
+    "workbench.colorTheme": "Pop N' Lock Theme by Luxcium ✨",
+    "workbench.iconTheme": "Monokai Pro (Filter Ristretto) Icons",
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.tabSize": 2,
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "79"
+    ],
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "autoDocstring.docstringFormat": "google",
+    "cmake.configureOnOpen": true,
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "files.trimTrailingWhitespace": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "editor.renderWhitespace": "none",
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": -1,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.confirmSync": false
+}
