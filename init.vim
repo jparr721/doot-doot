@@ -12,7 +12,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/goyo.vim'
 
 " Color Schemes
-Plug 'ajmwagar/vim-deus'
+Plug 'morhetz/gruvbox'
 
 " Google plugins
 Plug 'google/vim-maktaba'
@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafgarland/typescript-vim'       " Typescript
 Plug 'arzg/vim-rust-syntax-ext'         " Rust
 Plug 'ron-rs/ron.vim'                   " Rust object notation
+Plug 'reasonml-editor/vim-reason-plus'  " ReasonML
 
 " Formatting
 Plug 'ambv/black'
@@ -67,16 +68,18 @@ set rnu
 set smartindent          " match previous indent line
 set smartcase
 set autoread             " auomatically reload files
+set backspace=indent,eol,start
+set termguicolors
 
 map<C-h> <C-w>h
 map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
-map <C-n> :NERDTreeToggle<CR>
-set backspace=indent,eol,start
+map<C-n> :NERDTreeToggle<CR>
+" map<C-[> :call CocAction('jumpDefinition', 'tab drop')<CR>
 
 set background=dark
-colorscheme deus
+colorscheme gruvbox
 filetype plugin on
 
 """"""""""" Vim-python
@@ -123,3 +126,8 @@ au Filetype rust set colorcolumn=100
 
 """""""""" Go
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.formatOnSave')
+
+"""""""""" Goyo
+let g:goyo_width = 120
+let g:goyo_height = 95
