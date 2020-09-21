@@ -1,5 +1,5 @@
-cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
-cmd  + shift - w : /Applications/Google\ Chrome.app/Contents/MaxOS/Google\ Chrome
+# cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+cmd  + shift - w : /Applications/Firefox.app/Contents/MacOS/firefox
 
 ctrl - left : yabai -m window --focus west
 ctrl - down : yabai -m window --focus south
