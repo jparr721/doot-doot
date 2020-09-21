@@ -1,10 +1,7 @@
 echo "Installing and configuring tools"
 
-
-cd /home/skeletor
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 rm -rf ~/.zshrc
@@ -20,4 +17,4 @@ ln -s /home/skeletor/doot-doot/love.zsh-theme /home/skeletor/.oh-my-zsh/themes
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall
 chmod 755 msfinstall
 sh ./msfinstall
-pip3 install --user wheel pwntools
+pip3 install --user wheel black neovim pwntools

@@ -7,41 +7,33 @@ export TERM=xterm-color
 export TESSDATA_PREFIX=/usr/share/tessdata
 export GOROOT=/usr/lib/go
 export GOPATH=$HOME/Code/go
+export GOBIN=$GOPATH/bin
 export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
 export TERM=xterm-color
-export PATH=$PATH:/home/abraxas/.local/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH="$(yarn global bin):$PATH"
 
-# Android stuff
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-ZSH_THEME="love"
+ZSH_THEME="nanotech"
 
 plugins=(
   git
 )
 
 source $ZSH/oh-my-zsh.sh
-alias ll='ls -al --color=auto'
 alias home='cd ~/Desktop'
 alias work='cd ~/Work'
 alias code='cd ~/Code'
 alias lock='systemctl hibernate'
 alias sleep='systemctl suspend'
-alias poly-reload='polybar -r mybar'
 alias wifi='nmcli dev wifi con'
 alias sec='cd ~/Infosec'
 alias ml='cd ~/ML'
 alias resin='sudo systemctl start dhcpcd'
-alias yak='cd ~/yakyak && ./yakyak &'
-alias work='cd ~/Work'
-alias nightmode='redshift -O 4000'
 alias dl='cd ~/Downloads'
 alias vi='vim'
-alias tmux='tmux -2'
+alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black jedi'
+alias tmux="tmux -2"
+alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
 
 # Fix annoying ctrl-s shit
 stty -ixon
@@ -68,4 +60,8 @@ eval
             }
 
 source $HOME/.cargo/env
-source /usr/share/nvm/init-nvm.sh
+alias notary='echo "# $(date)" >> /home/drax/notary.md && echo '' >> /home/drax/notary.md && $EDITOR /home/drax/notary.md'
+alias notary_rm='rm -rf /home/drax/notary.md'
+
+export SPICETIFY_INSTALL="/home/drax/spicetify-cli"
+export PATH="$SPICETIFY_INSTALL:$PATH"
