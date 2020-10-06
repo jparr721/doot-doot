@@ -65,3 +65,6 @@ alias notary_rm='rm -rf /home/drax/notary.md'
 
 export SPICETIFY_INSTALL="/home/drax/spicetify-cli"
 export PATH="$SPICETIFY_INSTALL:$PATH"
+
+# opam configuration
+test -r /home/drax/.opam/opam-init/init.zsh && . /home/drax/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

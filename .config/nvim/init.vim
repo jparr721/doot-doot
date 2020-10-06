@@ -13,6 +13,7 @@ Plug 'junegunn/goyo.vim'
 
 " Color Schemes
 Plug 'morhetz/gruvbox'
+Plug 'cocopon/iceberg.vim'
 
 " Google plugins
 Plug 'google/vim-maktaba'
@@ -79,7 +80,7 @@ map<C-n> :NERDTreeToggle<CR>
 " map<C-[> :call CocAction('jumpDefinition', 'tab drop')<CR>
 
 set background=dark
-colorscheme gruvbox
+colorscheme iceberg
 filetype plugin on
 
 """"""""""" Vim-python
