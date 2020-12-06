@@ -33,9 +33,6 @@ alias vi='nvim'
 alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black jedi'
 alias tmux="tmux -2"
 alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
-alias kubestaging='export KUBECONFIG=~/.kube/kubeconfig-arryn-staging-redux'
-alias kubeprod='export KUBECONFIG=~/.kube/kubeconfig-stark-production'
-alias php='/usr/local/bin/php'
 
 # Fix annoying ctrl-s shit
 stty -ixon
