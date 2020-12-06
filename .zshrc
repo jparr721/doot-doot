@@ -11,7 +11,6 @@ export TERM=xterm-color
 export PATH=$PATH:$HOME/Library/Python/3.7/bin
 export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH="$(yarn global bin):$PATH"
-export NPM_TOKEN=afa6588a-d45e-4bbf-a683-a98d949c43ab
 
 ZSH_THEME="love"
 
