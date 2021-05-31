@@ -17,6 +17,7 @@ Plug 'tpope/vim-commentary'
 " Color Schemes
 Plug 'morhetz/gruvbox'
 Plug 'cocopon/iceberg.vim'
+Plug 'overcache/NeoSolarized'
 
 " Google plugins
 Plug 'google/vim-maktaba'
@@ -67,14 +68,21 @@ set completeopt-=preview
 autocmd BufWritePre * :%s/\s\+$//e " Remove filthy whitespace
 
 
+" Key maps for moving around panes.
 map<C-h> <C-w>h
 map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
 map<C-n> :NERDTreeToggle<CR>
 
+" Key maps for go-to-definition
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
 set background=dark
-colorscheme iceberg
+colorscheme gruvbox
 filetype plugin on
 
 """"""""""" Airline

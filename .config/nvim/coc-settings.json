@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["rust", "python", "css", "javascript", "typescript", "golang"],
+  "coc.preferences.formatOnSaveFiletypes": ["rust", "python", "css", "javascript", "typescript", "golang", "c", "cpp"],
   "rust.build_on_save": true,
   "rust.wait_to_build": 2000,
   "python.formatting.blackArgs": ["--line-length", "79"],
