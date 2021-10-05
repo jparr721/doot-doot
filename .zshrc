@@ -46,5 +46,3 @@ export NVM_DIR="$HOME/.nvm"
 
 alias notary='echo "# $(date)" >> $HOME/notary.md && echo '' >> $HOME/notary.md && $EDITOR $HOME/notary.md'
 alias notary_rm='rm -rf /home/drax/notary.md'
-
-source $HOME/.cargo/env
