@@ -49,3 +49,19 @@ export NVM_DIR="$HOME/.nvm"
 
 alias notary='echo "# $(date)" >> $HOME/notary.md && echo '' >> $HOME/notary.md && $EDITOR $HOME/notary.md'
 alias notary_rm='rm -rf $HOME/notary.md'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nightmare/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nightmare/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nightmare/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nightmare/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
