@@ -7,7 +7,9 @@ mv $HOME/.zshrc $HOME/.zshrc.old
 
 sudo ln -s $HOME/doot-doot/.config/nvim $HOME/.config/nvim
 sudo ln -s $HOME/doot-doot/.zshrc $HOME/.zshrc
+sudo ln -s $HOME/doot-doot/.tmux.conf $HOME/.tmux.conf
 
+sudo apt install -y tmux
 sudo apt install -y exa
 sudo apt install -y bat
 sudo apt install -y fd-find && sudo ln -s $(which fdfind) $HOME/.local/bin/fd
