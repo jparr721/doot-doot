@@ -2,7 +2,7 @@ DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
 export ZSH=$HOME/.oh-my-zsh
 
-export EDITOR=/usr/local/bin/nvim
+export EDITOR=/usr/bin/nvim
 
 export TERM=xterm-color
 
