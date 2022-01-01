@@ -39,6 +39,7 @@ let g:coc_global_extensions = [
     \ 'coc-eslint',
     \ 'coc-prettier',
     \ 'coc-gocode',
+    \ 'coc-pyright',
     \ 'coc-vimtex'
     \ ]
 
@@ -101,3 +102,6 @@ au Filetype rust set colorcolumn=100
 """""""""" Go
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.formatOnSave')
+
+"""""""""" Python
+autocmd BufWritePre *.py :silent call CocAction('runCommand', 'editor.action.organizeImport')
