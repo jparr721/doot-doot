@@ -9,10 +9,8 @@ sudo ln -s $HOME/doot-doot/.config/nvim $HOME/.config/nvim
 sudo ln -s $HOME/doot-doot/.zshrc $HOME/.zshrc
 sudo ln -s $HOME/doot-doot/.tmux.conf $HOME/.tmux.conf
 
-sudo apt install -y tmux
-sudo apt install -y exa
-sudo apt install -y bat
-sudo apt install -y fd-find && sudo ln -s $(which fdfind) $HOME/.local/bin/fd
+# sudo apt install -y tmux exa bat libglu1-mesa-dev freeglut3-dev mesa-common-dev fd-find
+sudo ln -s $(which fdfind) $HOME/.local/bin/fd
 
 echo "Getting node"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -22,3 +20,5 @@ echo "Getting anaconda"
 cd /tmp
 curl -O https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
 chmod +x Anaconda3-2021.05-Linux-x86_64.sh && sh -c Anaconda3-2021.05-Linux-x86_64.sh
+cd ~
+echo "Done"
