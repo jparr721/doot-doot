@@ -2,15 +2,16 @@
 
 set -euox pipefail
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv $HOME/.zshrc $HOME/.zshrc.old
+ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ mv $HOME/.zshrc $HOME/.zshrc.old
 
-sudo ln -s $HOME/doot-doot/.config/nvim $HOME/.config/nvim
-sudo ln -s $HOME/doot-doot/.zshrc $HOME/.zshrc
-sudo ln -s $HOME/doot-doot/.tmux.conf $HOME/.tmux.conf
+ sudo ln -s $HOME/doot-doot/.config/nvim $HOME/.config/nvim
+ sudo ln -s $HOME/doot-doot/.zshrc $HOME/.zshrc
+ sudo ln -s $HOME/doot-doot/.tmux.conf $HOME/.tmux.conf
 
-# sudo apt install -y tmux exa bat libglu1-mesa-dev freeglut3-dev mesa-common-dev fd-find
-sudo ln -s $(which fdfind) $HOME/.local/bin/fd
+ mkdir -p $HOME/.local/bin
+ sudo apt install -y tmux exa bat fd-find
+ sudo ln -s $(which fdfind) $HOME/.local/bin/fd
 
 echo "Getting node"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
