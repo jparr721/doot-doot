@@ -39,6 +39,9 @@ alias python="python3"
 alias ls="exa"
 alias find="fd"
 alias cat="batcat"
+alias gs="git status"
+alias gpull="git pull"
+alias ca="conda activate"
 
 # Fix annoying ctrl-s shit
 stty -ixon
