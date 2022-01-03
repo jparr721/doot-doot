@@ -41,7 +41,12 @@ alias find="fd"
 alias cat="batcat"
 alias gs="git status"
 alias gpull="git pull"
+
+# Anaconda
 alias ca="conda activate"
+alias ci="conda install"
+alias cx="conda env export --no-build"
+alias cda="conda deactivate"
 
 # Fix annoying ctrl-s shit
 stty -ixon
