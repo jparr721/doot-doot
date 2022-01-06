@@ -27,6 +27,9 @@ Plug 'google/vim-glaive'
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Docstring support
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+
 " Formatting
 Plug 'ambv/black'
 call plug#end()
@@ -77,11 +80,26 @@ map<C-k> <C-w>k
 map<C-l> <C-w>l
 map<C-n> :NERDTreeToggle<CR>
 
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
 " Key maps for go-to-definition
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+nmap <silent> <C-_> <Plug>(pydocstring)
 
 set background=dark
 colorscheme gruvbox
@@ -106,3 +124,4 @@ autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.formatOnSa
 
 """""""""" Python
 autocmd BufWritePre *.py :silent call CocAction('runCommand', 'editor.action.organizeImport')
+let g:pydocstring_formatter = 'google' " Sets the docstring generator to google style

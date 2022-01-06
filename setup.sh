@@ -19,7 +19,7 @@ nvm install 16.13.1 && nvm use 16.13.1
 
 echo "Getting anaconda"
 cd /tmp
-curl -O https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
-chmod +x Anaconda3-2021.05-Linux-x86_64.sh && sh -c Anaconda3-2021.05-Linux-x86_64.sh
-cd ~
+curl -O https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh && chmod +x Anaconda3-2021.05-Linux-x86_64.sh
+echo "Execute ./tmp/Anaconda3-2021.05-Linux-x86_64.sh to finish setting up anaconda"
+
 echo "Done"
