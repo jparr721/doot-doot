@@ -32,13 +32,17 @@ alias code='cd ~/Code'
 alias dl='cd ~/Downloads'
 alias vi='nvim'
 alias vim='nvim'
-alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black jedi'
+alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black isort'
 alias tmux="tmux -2"
 alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
 alias python="python3"
 alias ls="exa"
 alias find="fd"
 alias cat="batcat"
+
+# Git Commands
+alias gco="git checkout"
+alias gr="git reset"
 alias gs="git status"
 alias gpull="git pull"
 

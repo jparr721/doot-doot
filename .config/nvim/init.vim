@@ -32,7 +32,25 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
 " Formatting
 Plug 'ambv/black'
+
+" Debugger support
+Plug 'puremourning/vimspector'
+
+" Better wildmenu
+Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
+
+" Builtin options for vimspector
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
+
+" Wilder
+call wilder#setup({
+      \ 'modes': [':', '/', '?'],
+      \ 'next_key': '<Tab>',
+      \ 'previous_key': '<S-Tab>',
+      \ 'accept_key': '<Down>',
+      \ 'reject_key': '<Up>',
+      \ })
 
 " Autocomplete and plugins
 let g:coc_global_extensions = [
@@ -122,6 +140,27 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
+
+" Vimspector
+" Start Debugging
+nmap <Leader>dc <Plug>VimspectorContinue
+
+" Stop Debugging
+nmap <Leader>ds <Plug>VimspectorStop
+
+" Toggle Breakpoint
+nmap <Leader>dt <Plug>VimspectorToggleBreakpoint
+
+" Step Over
+nmap <Leader>do <Plug>VimspectorStepOver
+
+" Step Into
+nmap <Leader>dd <Plug>VimspectorStepInto
+
+" Step out
+nmap <Leader>du <Plug>VimspectorStepOut
+
+nmap <silent> <C-_> <Plug>(pydocstring)
 
 set background=dark
 colorscheme gruvbox
