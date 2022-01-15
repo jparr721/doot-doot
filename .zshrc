@@ -6,7 +6,6 @@ export EDITOR=/usr/bin/nvim
 
 export TERM=xterm-color
 
-export TESSDATA_PREFIX=/usr/share/tessdata
 export GOPATH=$HOME/Code/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
@@ -16,7 +15,6 @@ export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
-export FrameworkPathOverride=$(which mono | rev | cut -d "/" -f3- | rev)
 export PATH="$PATH:$HOME/bin"
 
 ZSH_THEME="agnoster"
@@ -32,7 +30,7 @@ alias code='cd ~/Code'
 alias dl='cd ~/Downloads'
 alias vi='nvim'
 alias vim='nvim'
-alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black isort'
+alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black isort debugpy'
 alias tmux="tmux -2"
 alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
 alias python="python3"

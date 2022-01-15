@@ -61,6 +61,7 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-gocode',
     \ 'coc-pyright',
+    \ 'coc-clangd',
     \ 'coc-vimtex'
     \ ]
 
