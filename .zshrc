@@ -5,18 +5,10 @@ export ZSH=$HOME/.oh-my-zsh
 export EDITOR=/usr/bin/nvim
 
 export TERM=xterm-color
-
-export TESSDATA_PREFIX=/usr/share/tessdata
-export GOPATH=$HOME/Code/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:/usr/lib/go/bin:$GOPATH/bin
-export TERM=xterm-color
-export PATH=$PATH:$HOME/Library/Python/3.8/bin
-export PATH=$PATH:$HOME/.emacs.d/bin
 export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
-export FrameworkPathOverride=$(which mono | rev | cut -d "/" -f3- | rev)
 export PATH="$PATH:$HOME/bin"
 
 ZSH_THEME="agnoster"
