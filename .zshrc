@@ -9,6 +9,7 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export PATH="$PATH:$HOME/bin"
 
 ZSH_THEME="agnoster"
@@ -19,8 +20,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 alias doc='cd ~/Documents'
-alias code='cd ~/Code'
 alias dl='cd ~/Downloads'
+alias prj='cd ~/Projects'
 alias vi='nvim'
 alias vim='nvim'
 alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black isort debugpy'
@@ -29,7 +30,7 @@ alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
 alias python="python3"
 alias ls="exa"
 alias find="fd"
-alias cat="batcat"
+alias cat="bat"
 
 # Git Commands
 alias gco="git checkout"
@@ -53,3 +54,8 @@ export NVM_DIR="$HOME/.nvm"
 alias notary='echo "# $(date)" >> $HOME/notary.md && echo '' >> $HOME/notary.md && $EDITOR $HOME/notary.md'
 alias notary_rm='rm -rf $HOME/notary.md'
 
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
