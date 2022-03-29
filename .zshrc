@@ -2,7 +2,7 @@ DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
 export ZSH=$HOME/.oh-my-zsh
 
-export EDITOR=/usr/bin/nvim
+export EDITOR=$(which nvim)
 
 export TERM=xterm-color
 export PATH="$HOME/.yarn/bin:$PATH"
