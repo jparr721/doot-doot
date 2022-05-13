@@ -11,18 +11,14 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Editor Configs
 Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'tpope/vim-commentary'
+Plug 'psliwka/vim-smoothie'
 
 " Color Schemes
 Plug 'morhetz/gruvbox'
-Plug 'cocopon/iceberg.vim'
-Plug 'overcache/NeoSolarized'
-
-" Google plugins
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
-Plug 'google/vim-glaive'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -33,15 +29,9 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " Formatting
 Plug 'ambv/black'
 
-" Debugger support
-Plug 'puremourning/vimspector'
-
 " Better wildmenu
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
-
-" Builtin options for vimspector
-let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
 
 " Wilder
 call wilder#setup({
@@ -69,7 +59,7 @@ let g:coc_global_extensions = [
 set clipboard+=unnamedplus
 
 " Airline theme
-let g:airline_theme='bubblegum'
+let g:airline_theme='violet'
 
 " GUI Settings
 set synmaxcol=500        " no syntax highlight on long lines for perf.
@@ -77,9 +67,12 @@ set lazyredraw           " reduce updates while not typing
 set nocompatible
 set cindent
 syntax on
-set ts=2
+
+" Set Tab Size
+set ts=4
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
+
 set nu
 set rnu
 set smartindent          " match previous indent line
@@ -141,29 +134,10 @@ nmap <silent> gr <Plug>(coc-references)
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Vimspector
-" Start Debugging
-nmap <Leader>dc <Plug>VimspectorContinue
-
-" Stop Debugging
-nmap <Leader>ds <Plug>VimspectorStop
-
-" Toggle Breakpoint
-nmap <Leader>dt <Plug>VimspectorToggleBreakpoint
-
-" Step Over
-nmap <Leader>do <Plug>VimspectorStepOver
-
-" Step Into
-nmap <Leader>dd <Plug>VimspectorStepInto
-
-" Step out
-nmap <Leader>du <Plug>VimspectorStepOut
-
 nmap <silent> <C-_> <Plug>(pydocstring)
 
 set background=dark
-colorscheme gruvbox
+colorscheme onenord
 filetype plugin on
 
 """"""""""" Airline
@@ -189,3 +163,9 @@ nmap <silent> <C-_> <Plug>(pydocstring)
 
 autocmd BufWritePre *.py :silent call CocAction('runCommand', 'editor.action.organizeImport')
 let g:pydocstring_formatter = 'google' " Sets the docstring generator to google style
+
+"""""""""" Telescope
+nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
