@@ -31,6 +31,9 @@ alias python="python3"
 alias ls="exa"
 alias find="fd"
 alias cat="bat"
+alias df="duf"
+alias du="dust"
+alias crawl="grep -Irisn"
 
 # Git Commands
 alias gco="git checkout"
@@ -47,6 +50,7 @@ alias cda="conda deactivate"
 # Fix annoying ctrl-s shit
 stty -ixon
 
+# Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
