@@ -19,6 +19,7 @@ Plug 'psliwka/vim-smoothie'
 " Color Schemes
 Plug 'morhetz/gruvbox'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+Plug 'junegunn/seoul256.vim'
 
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -59,7 +60,7 @@ let g:coc_global_extensions = [
 set clipboard+=unnamedplus
 
 " Airline theme
-let g:airline_theme='violet'
+let g:airline_theme='bubblegum'
 
 " GUI Settings
 set synmaxcol=500        " no syntax highlight on long lines for perf.
@@ -136,8 +137,9 @@ nmap <leader>rn <Plug>(coc-rename)
 
 nmap <silent> <C-_> <Plug>(pydocstring)
 
+let g:seoul256_background = 235
 set background=dark
-colorscheme onenord
+colorscheme seoul256
 filetype plugin on
 
 """"""""""" Airline
