@@ -20,6 +20,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'morhetz/gruvbox'
 Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
 Plug 'junegunn/seoul256.vim'
+Plug 'sainnhe/everforest'
 
 " Languages
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -74,6 +75,9 @@ set ts=4
 set expandtab
 set shiftwidth=4
 
+" Turn on the mouse
+set mouse=a
+
 set nu
 set rnu
 set smartindent          " match previous indent line
@@ -91,6 +95,10 @@ map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
 map<C-n> :NERDTreeToggle<CR>
+
+" Key maps for escape
+imap jk <Esc>
+imap kj <Esc>
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -126,6 +134,9 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" Open terminal
+command! -nargs=* T belowright split | resize 10 | terminal <args>
+
 " Key maps for go-to-definition
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -137,19 +148,12 @@ nmap <leader>rn <Plug>(coc-rename)
 
 nmap <silent> <C-_> <Plug>(pydocstring)
 
-let g:seoul256_background = 235
 set background=dark
-colorscheme seoul256
+colorscheme everforest
 filetype plugin on
 
 """"""""""" Airline
 let g:airline_powerline_fonts = 1
-
-""""""""""" Ctrl-p
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 """""""""" Rust
 " Rust code style guidelines
