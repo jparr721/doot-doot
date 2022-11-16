@@ -8,7 +8,9 @@
     "golang",
     "c",
     "cpp",
-    "cc"
+    "cc",
+    "objc",
+    "objcpp"
   ],
   "python.formatting.blackArgs": ["--line-length", "90"],
   "python.linting.flake8Args": ["--config $HOME/.config/flake8"],
@@ -16,15 +18,5 @@
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
-  "python.formatting.provider": "black",
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
-      }
-    }
-  }
+  "python.formatting.provider": "black"
 }

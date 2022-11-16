@@ -10,7 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Editor Configs
-Plug 'scrooloose/nerdtree'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'tpope/vim-commentary'
@@ -18,8 +18,6 @@ Plug 'psliwka/vim-smoothie'
 
 " Color Schemes
 Plug 'morhetz/gruvbox'
-Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
-Plug 'junegunn/seoul256.vim'
 Plug 'sainnhe/everforest'
 
 " Languages
@@ -27,9 +25,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Docstring support
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
-
-" Formatting
-Plug 'ambv/black'
 
 " Better wildmenu
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -46,15 +41,9 @@ call wilder#setup({
 
 " Autocomplete and plugins
 let g:coc_global_extensions = [
-    \ 'coc-tsserver',
-    \ 'coc-css',
-    \ 'coc-rust-analyzer',
-    \ 'coc-eslint',
-    \ 'coc-prettier',
-    \ 'coc-gocode',
     \ 'coc-pyright',
     \ 'coc-clangd',
-    \ 'coc-vimtex'
+    \ 'coc-rust-analyzer',
     \ ]
 
 " Use system clipboard
@@ -94,11 +83,23 @@ map<C-h> <C-w>h
 map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
-map<C-n> :NERDTreeToggle<CR>
+map <C-n> <cmd>CHADopen<cr>
 
 " Key maps for escape
 imap jk <Esc>
 imap kj <Esc>
+
+" Key maps for navigation within a pane.
+" Navigate visual lines instead of logical ones
+nmap j gj
+nmap k gk
+
+" Use H and L to go to end/beginning of lines
+nmap H ^
+nmap L $
+
+" Remove search highlights
+nmap <F9> :nohl
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -114,8 +115,6 @@ function! s:show_documentation()
 endfunction
 
 " Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -134,8 +133,11 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
 " Open terminal
 command! -nargs=* T belowright split | resize 10 | terminal <args>
+command! -nargs=* VT vsplit | terminal <args>
 
 " Key maps for go-to-definition
 nmap <silent> gd <Plug>(coc-definition)
@@ -143,10 +145,14 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+" Remap keys for applying codeAction to the current buffer.
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
-
-nmap <silent> <C-_> <Plug>(pydocstring)
 
 set background=dark
 colorscheme everforest
@@ -154,14 +160,6 @@ filetype plugin on
 
 """"""""""" Airline
 let g:airline_powerline_fonts = 1
-
-"""""""""" Rust
-" Rust code style guidelines
-au Filetype rust set colorcolumn=100
-
-"""""""""" Go
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.formatOnSave')
 
 """""""""" Python
 " Docstring generation for python
@@ -175,3 +173,6 @@ nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+"""""""""" Vim-Commentary
+autocmd FileType objc,objcpp,c,cpp,cs,java setlocal commentstring=//\ %s

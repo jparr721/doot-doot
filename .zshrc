@@ -21,7 +21,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 alias doc='cd ~/Documents'
 alias dl='cd ~/Downloads'
-alias prj='cd ~/Projects'
+alias prj='cd ~/Documents/Projects'
 alias vi='nvim'
 alias vim='nvim'
 alias vnv='virtualenv venv && source venv/bin/activate && pip install neovim flake8 black isort debugpy'
@@ -34,12 +34,14 @@ alias cat="bat"
 alias df="duf"
 alias du="dust"
 alias crawl="grep -Irisn"
+alias pip="pip3"
+alias sshgrace="ssh jp2844@grace.hpc.yale.edu"
+alias sshhaomiao="ssh hw524@172.29.249.65"
 
 # Git Commands
 alias gco="git checkout"
 alias gr="git reset"
 alias gs="git status"
-alias gpull="git pull"
 
 # Anaconda
 alias ca="conda activate"
