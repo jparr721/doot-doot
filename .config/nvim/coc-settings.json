@@ -10,10 +10,11 @@
     "cpp",
     "cc",
     "objc",
-    "objcpp"
+    "objcpp",
+    "html"
   ],
-  "python.formatting.blackArgs": ["--line-length", "90"],
-  "python.linting.flake8Args": ["--config $HOME/.config/flake8"],
+  "python.formatting.blackArgs": ["--line-length", "120"],
+  "python.linting.flake8Args": ["--max-line-length=120", "--ignore=F403, F405, E203, W503, E402, E741, E722"],
   "pyright.organizeimports.provider": "isort",
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
