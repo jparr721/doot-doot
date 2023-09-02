@@ -34,3 +34,17 @@ cmd + alt - n : yabai -m space --create
 cmd + alt - d : yabai -m space --destroy
 
 ctrl - f       : yabai -m window --toggle zoom-fullscreen
+
+## Stacks (shift + ctrl - ...)
+# Add the active window to the window or stack to the {direction}: shift + ctrl - {h, j, k, l}
+shift + cmd - left    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id');
+shift + cmd - down    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id');
+shift + cmd - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id');
+shift + cmd - right    : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id');
+
+# Stack Navigation: shift + ctrl - {n, p}
+cmd + alt - up : yabai -m window --focus stack.next
+cmd + alt - down : yabai -m window --focus stack.prev
+
+# Open the terminal with cmd+enter (i3)
+cmd - return : open -na "/Applications/iTerm.app"
