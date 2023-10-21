@@ -24,5 +24,6 @@ spacebar -m config power_icon_strip  🔋 🔌
 spacebar -m config space_icon        🛰
 spacebar -m config clock_icon        ⏰
 spacebar -m config dnd_icon          🌝
+spacebar -m config clock_format         "%m/%d/%y %I:%M%p"
 
 echo "spacebar configuration loaded"

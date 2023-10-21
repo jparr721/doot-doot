@@ -50,7 +50,8 @@ let g:coc_global_extensions = [
     \ 'coc-clangd',
     \ 'coc-rust-analyzer',
     \ 'coc-html',
-    \ 'coc-tsserver'
+    \ 'coc-tsserver',
+    \ 'coc-go'
     \ ]
 
 " Use system clipboard
