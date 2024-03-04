@@ -192,16 +192,14 @@ require("lazy").setup({
       require('nvim-treesitter.configs').setup({
         ensure_installed = {
           'c',
-          'proto',
+          'go',
           'lua',
-          'vimdoc',
           'vim',
           'bash',
           'json',
           'rust',
           'markdown',
           'markdown_inline',
-          'mermaid',
         },
         indent = { enable = true },
         incremental_selection = {
