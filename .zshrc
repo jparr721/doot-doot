@@ -29,7 +29,7 @@ alias vnv='virtualenv -p `which python3` venv && source venv/bin/activate && pip
 alias tmux="tmux -2"
 alias gk='cat ~/.sleuthy/.gitkey | xclip -selection clipboard'
 alias python="python3"
-alias ls="exa"
+alias ls="eza"
 alias find="fd"
 alias cat="bat"
 alias df="duf"
@@ -71,22 +71,6 @@ export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 export VCPKG_ROOT="/Users/jarredparr/vcpkg"
 
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-#         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
-#
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias)
@@ -97,3 +81,5 @@ eval $(thefuck --alias)
 # bun
 export BUN_INSTALL="$HOME/.reflex/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+. ~/.linuxify
