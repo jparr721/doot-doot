@@ -16,11 +16,11 @@ vim.opt.rtp:prepend(lazypath)
 local function change_background()
   local m = vim.fn.system("defaults read -g AppleInterfaceStyle")
   m = m:gsub("%s+", "") -- trim whitespace
-  -- if m == "Dark" then
-  vim.o.background = "dark"
-  -- else
-  --   vim.o.background = "light"
-  -- end
+  if m == "Dark" then
+    vim.o.background = "dark"
+  else
+    vim.o.background = "light"
+  end
 end
 
 require("lazy").setup({
@@ -449,7 +449,6 @@ vim.opt.backspace = 'indent,eol,start'
 vim.opt.termguicolors = true
 vim.opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 vim.opt.showmatch = true     -- Highlight matching parenthesis
-vim.opt.autochdir = true     -- Change CWD when I open a file
 
 vim.cmd('autocmd BufWritePre * :%s/\\s\\+$//e') -- Remove filthy whitespace
 
