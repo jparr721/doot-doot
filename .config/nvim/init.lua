@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 local function change_background()
   local m = vim.fn.system("defaults read -g AppleInterfaceStyle")
   m = m:gsub("%s+", "") -- trim whitespace
+
   if m == "Dark" then
     vim.o.background = "dark"
   else
@@ -510,4 +511,19 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     callback = function()
         vim.lsp.buf.format()
     end
+})
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+})
+-- Reduce the time it takes to launch the diagnostic window on hover
+vim.o.updatetime = 250
+vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
+  group = vim.api.nvim_create_augroup("float_diagnostic_cursor", { clear = true }),
+  callback = function ()
+    vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})
+  end
 })
