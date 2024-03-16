@@ -52,6 +52,8 @@ require("lazy").setup({
       local capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
       capabilities.textDocument.completion.completionItem.snippetSupport = true
 
+      require('lspconfig').ruff_lsp.setup {}
+
       require("lspconfig").rust_analyzer.setup {
       settings = {
         ['rust-analyzer'] = {},
@@ -194,6 +196,7 @@ require("lazy").setup({
         ensure_installed = {
           'c',
           'go',
+          'python',
           'lua',
           'vim',
           'bash',
@@ -278,6 +281,7 @@ require("lazy").setup({
       })
     end,
   },
+  'nvim-treesitter/nvim-treesitter-context',
   'nvim-lua/plenary.nvim',
   'mfussenegger/nvim-dap',
   {
@@ -527,3 +531,8 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
     vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})
   end
 })
+
+-- Go to the top of the context in the current scope
+vim.keymap.set("n", "[c", function()
+  require("treesitter-context").go_to_context(vim.v.count1)
+end, { silent = true })
