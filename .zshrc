@@ -29,7 +29,7 @@ alias tmux="tmux -2"
 alias python="python3"
 alias ls="eza"
 alias find="fd"
-alias cat="bat"
+alias cat="batcat"
 alias df="duf"
 alias du="dust"
 alias crawl="grep -Irisn"
@@ -60,5 +60,3 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias)
-
-. ~/.linuxify
