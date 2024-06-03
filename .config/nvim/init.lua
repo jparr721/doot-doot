@@ -11,19 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- ChangeBackground changes the background mode based on macOS's `Appearance
--- setting.
-local function change_background()
-  local m = vim.fn.system("defaults read -g AppleInterfaceStyle")
-  m = m:gsub("%s+", "") -- trim whitespace
-
-  if m == "Dark" then
-    vim.o.background = "dark"
-  else
-    vim.o.background = "light"
-  end
-end
-
 require("lazy").setup({
     {
       "folke/which-key.nvim",
@@ -72,7 +59,6 @@ require("lazy").setup({
       "ellisonleao/gruvbox.nvim",
           priority = 1000, -- make sure to load this before all the other start plugins
           config = function ()
-          change_background()
           require("gruvbox").setup({
               contrast = "hard"
           })
