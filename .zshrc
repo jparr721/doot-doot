@@ -21,14 +21,14 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 alias doc='cd ~/Documents'
 alias dl='cd ~/Downloads'
-alias prj='cd ~/Documents/Projects'
+alias prj='cd ~/Projects'
 alias vi='nvim'
 alias vim='nvim'
 alias vnv='virtualenv -p `which python3` venv && source venv/bin/activate && pip install neovim pylint black isort debugpy'
 alias tmux="tmux -2"
 alias python="python3"
 alias ls="eza"
-alias find="fd"
+alias find="fdfind"
 alias cat="batcat"
 alias df="duf"
 alias du="dust"
@@ -60,3 +60,5 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval $(thefuck --alias)
+
+export RUSTFLAGS='--cfg async_executor_impl="async-std" --cfg async_channel_impl="async-std" --cfg hotshot_example -C linker=clang -C link-arg=-fuse-ld=$HOME/.local/bin/mold'
