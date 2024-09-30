@@ -52,6 +52,19 @@ require("lazy").setup({
     -- dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       require("nvim-tree").setup({
+        renderer = {
+          icons = {
+            show = {
+              file = false,
+              folder = false,
+              folder_arrow = false,
+              git = false,
+              modified = false,
+              diagnostics = false,
+              bookmarks = false
+            }
+          }
+        },
         sort_by = "case_sensitive",
         filters = {
           dotfiles = true,
@@ -145,3 +158,16 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+-- Create autocommands for automatically checking for file changes
+vim.cmd([[
+  augroup autoread
+    autocmd!
+    " Check for changes when switching focus to Neovim
+    autocmd FocusGained,BufEnter * checktime
+    " Check for changes when leaving insert mode
+    autocmd InsertLeave * checktime
+  augroup END
+
+  " Show a message when the file is reloaded
+  autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+]])
