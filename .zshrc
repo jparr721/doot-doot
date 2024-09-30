@@ -9,7 +9,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export PATH="$PATH:$HOME/bin"
 
 ZSH_THEME="agnoster"
@@ -27,13 +26,16 @@ alias vim='nvim'
 alias vnv='virtualenv -p `which python3` venv && source venv/bin/activate && pip install neovim pylint black isort debugpy'
 alias tmux="tmux -2"
 alias python="python3"
-alias ls="eza"
-alias find="fdfind"
+alias ls="jls"
+alias find="jfind"
 alias cat="batcat"
-alias df="duf"
-alias du="dust"
 alias crawl="grep -Irisn"
 alias pip="pip3"
+alias bb="b -b"
+alias bf="b -f"
+alias copy="xclip -selection clipboard"
+alias nocolor='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g"'
+alias hack='docker run -it --name kali --network=host --privileged -v $HOME/Projects/Kali:/data kalilinux/kali-rolling'
 
 # Git Commands
 alias gco="git checkout"
@@ -61,4 +63,12 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 eval $(thefuck --alias)
 
-export RUSTFLAGS='--cfg async_executor_impl="async-std" --cfg async_channel_impl="async-std" --cfg hotshot_example -C linker=clang -C link-arg=-fuse-ld=$HOME/.local/bin/mold'
+export RUSTFLAGS='--cfg async_executor_impl="async-std" --cfg async_channel_impl="async-std" --cfg hotshot_example -C linker=clang -C link-arg=-fuse-ld=/home/pine/.local/bin/mold'
+source "$HOME/.rye/env"
+
+# bun completions
+[ -s "/home/pine/.bun/_bun" ] && source "/home/pine/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
