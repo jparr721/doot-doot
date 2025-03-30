@@ -533,3 +533,11 @@ vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
 vim.keymap.set("n", "[c", function()
   require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
+
+-- Create autocommands for automatically checking for file changes
+vim.cmd([[
+  augroup AutoReload
+    autocmd!
+    autocmd CursorHold,CursorHoldI * checktime
+  augroup END
+]])
