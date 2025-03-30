@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
 export ZSH=$HOME/.oh-my-zsh
@@ -11,7 +18,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH="$PATH:$HOME/bin"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
@@ -26,16 +33,15 @@ alias vim='nvim'
 alias vnv='virtualenv -p `which python3` venv && source venv/bin/activate && pip install neovim pylint black isort debugpy'
 alias tmux="tmux -2"
 alias python="python3"
-alias ls="jls"
-alias find="jfind"
-alias cat="batcat"
+alias cat="bat"
 alias crawl="grep -Irisn"
+alias find="fd"
 alias pip="pip3"
 alias bb="b -b"
 alias bf="b -f"
 alias copy="xclip -selection clipboard"
 alias nocolor='sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g"'
-alias hack='docker run -it --name kali --network=host --privileged -v $HOME/Projects/Kali:/data kalilinux/kali-rolling'
+alias hack='docker run -it --name kali --network=host --privileged -v $HOME/Kali:/data kalilinux/kali-rolling'
 
 # Git Commands
 alias gco="git checkout"
@@ -63,12 +69,12 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 eval $(thefuck --alias)
 
-export RUSTFLAGS='--cfg async_executor_impl="async-std" --cfg async_channel_impl="async-std" --cfg hotshot_example -C linker=clang -C link-arg=-fuse-ld=/home/pine/.local/bin/mold'
-source "$HOME/.rye/env"
-
 # bun completions
 [ -s "/home/pine/.bun/_bun" ] && source "/home/pine/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

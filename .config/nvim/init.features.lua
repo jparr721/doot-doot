@@ -413,6 +413,13 @@ require'cmp'.setup {
 -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig').rust_analyzer.setup({ capabilities = capabilities })
+require('lspconfig').ruff.setup({
+  init_options = {
+    settings = {
+      -- Ruff language server settings go here
+    }
+  }
+})
 
 -- GUI Settings
 vim.api.nvim_set_option('synmaxcol', 500) -- no syntax highlight on long lines for perf.
