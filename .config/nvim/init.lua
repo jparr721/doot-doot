@@ -47,11 +47,6 @@ require("lazy").setup({
 
     end,
   },
-  -- {
-  --   'mrcjkb/rustaceanvim',
-  --   version = '^4', -- Recommended
-  --   ft = { 'rust' },
-  -- },
     -- colorscheme
   {
       "ellisonleao/gruvbox.nvim",
