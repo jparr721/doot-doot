@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 DISABLE_AUTO_UPDATE="true"
 ZSH_DISABLE_COMPFIX="true"
 export ZSH=$HOME/.oh-my-zsh
@@ -12,7 +19,7 @@ export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export PATH="$PATH:$HOME/bin"
 
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
   git
@@ -34,6 +41,7 @@ alias df="duf"
 alias du="dust"
 alias crawl="grep -Irisn"
 alias pip="pip3"
+alias hack='docker run -it --name kali --network=host --privileged -v $HOME/Kali:/data kalilinux/kali-rolling'
 
 # Git Commands
 alias gco="git checkout"
@@ -59,6 +67,5 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(thefuck --alias)
-
-. ~/.linuxify
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
