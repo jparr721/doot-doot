@@ -18,7 +18,7 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH="$PATH:$HOME/bin"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="agnoster"
 
 plugins=(
   git
@@ -67,14 +67,9 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(thefuck --alias)
-
 # bun completions
 [ -s "/home/pine/.bun/_bun" ] && source "/home/pine/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
