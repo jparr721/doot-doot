@@ -8,6 +8,10 @@
       "rev": "b7c48a7111534b66bee077da8035ac7208a294ff",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "nvim-tree.lua": {
+      "rev": "1eda2569394f866360e61f590f1796877388cb8a",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
     "oil.nvim": {
       "rev": "7e1cd7703ff2924d7038476dcbc04b950203b902",
       "src": "https://github.com/stevearc/oil.nvim"
