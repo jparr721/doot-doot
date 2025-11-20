@@ -11,9 +11,10 @@ vim.o.shiftwidth = 2
 vim.o.swapfile = false
 vim.o.winborder = "rounded"
 vim.g.mapleader = " "
-vim.opt.mouse = 'a'                         -- Enable mouse support
-vim.opt.termguicolors = true
-vim.opt.clipboard = 'unnamedplus'           -- Copy/paste to system clipboard
+vim.o.mouse = 'a'                         -- Enable mouse support
+vim.o.termguicolors = true
+vim.o.clipboard = 'unnamedplus'           -- Copy/paste to system clipboard
+vim.o.updatetime = 250
 vim.api.nvim_set_option('synmaxcol', 500)   -- no syntax highlight on long lines for perf.
 vim.api.nvim_set_option('lazyredraw', true) -- reduce updates while not typing
 vim.api.nvim_set_option('compatible', false)
@@ -98,8 +99,22 @@ vim.lsp.enable({
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
+    -- Completion
     if client:supports_method('textDocument/completion') then
       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+    end
+
+    -- Signature help
+    if client:supports_method('textDocument/signatureHelp') then
+      vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, { buffer = ev.buf })
+
+      vim.api.nvim_create_autocmd('CursorHoldI', {
+        buffer = ev.buf,
+        callback = function()
+          vim.lsp.buf.signature_help()
+        end
+      })
     end
   end,
 })
