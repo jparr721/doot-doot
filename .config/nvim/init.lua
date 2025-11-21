@@ -11,9 +11,9 @@ vim.o.shiftwidth = 2
 vim.o.swapfile = false
 vim.o.winborder = "rounded"
 vim.g.mapleader = " "
-vim.o.mouse = 'a'                         -- Enable mouse support
+vim.o.mouse = 'a'                           -- Enable mouse support
 vim.o.termguicolors = true
-vim.o.clipboard = 'unnamedplus'           -- Copy/paste to system clipboard
+vim.o.clipboard = 'unnamedplus'             -- Copy/paste to system clipboard
 vim.o.updatetime = 250
 vim.api.nvim_set_option('synmaxcol', 500)   -- no syntax highlight on long lines for perf.
 vim.api.nvim_set_option('lazyredraw', true) -- reduce updates while not typing
@@ -43,7 +43,8 @@ vim.pack.add({
   { src = "https://github.com/gelguy/wilder.nvim" },
   { src = "https://github.com/tpope/vim-commentary" },
   { src = "https://github.com/psliwka/vim-smoothie" },
-  { src = "https://github.com/nvim-tree/nvim-tree.lua" }
+  { src = "https://github.com/nvim-tree/nvim-tree.lua" },
+  { src = "https://github.com/saghen/blink.cmp",       build = "cargo build --release" }
 })
 
 require 'mini.pick'.setup()
@@ -90,40 +91,35 @@ require "nvim-tree".setup({
     vim.keymap.set('n', 'u', api.tree.change_root_to_parent, opts('Up'))
   end
 })
+
+-- Autocomplete
+require 'blink.cmp'.setup({
+  keymap = { preset = "default" },
+  signature = { enabled = true },
+  completion = { documentation = { auto_show = true } },
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+  fuzzy = {
+    implementation = "prefer_rust",
+  },
+  appearance = {
+    nerd_font_variant = 'mono'
+  },
+})
+
 -- LSP
 vim.lsp.enable({
   "biome",
   "lua_ls",
   "ts_ls",
 })
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
 
-    -- Completion
-    if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-    end
-
-    -- Signature help
-    if client:supports_method('textDocument/signatureHelp') then
-      vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, { buffer = ev.buf })
-
-      vim.api.nvim_create_autocmd('CursorHoldI', {
-        buffer = ev.buf,
-        callback = function()
-          vim.lsp.buf.signature_help()
-        end
-      })
-    end
-  end,
-})
-vim.cmd("set completeopt+=noselect")
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>g', ':Pick grep<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>l', ':NvimTreeToggle<CR>', { noremap = true })
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile!<CR>', { noremap = true })
 vim.cmd("colorscheme vague")
 vim.cmd(":hi statusline guibg=NONE")
