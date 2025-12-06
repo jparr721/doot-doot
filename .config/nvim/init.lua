@@ -44,7 +44,8 @@ vim.pack.add({
   { src = "https://github.com/tpope/vim-commentary" },
   { src = "https://github.com/psliwka/vim-smoothie" },
   { src = "https://github.com/nvim-tree/nvim-tree.lua" },
-  { src = "https://github.com/saghen/blink.cmp",       build = "cargo build --release" }
+  { src = "https://github.com/saghen/blink.cmp",       build = "cargo build --release" },
+  { src = "https://github.com/morhetz/gruvbox" }
 })
 
 require 'mini.pick'.setup()
@@ -121,5 +122,5 @@ vim.keymap.set('n', '<leader>g', ':Pick grep<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 vim.keymap.set('n', '<leader>l', ':NvimTreeToggle<CR>', { noremap = true })
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile!<CR>', { noremap = true })
-vim.cmd("colorscheme vague")
+vim.cmd("colorscheme gruvbox")
 vim.cmd(":hi statusline guibg=NONE")
