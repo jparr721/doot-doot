@@ -11,7 +11,10 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias p='python'
 alias vim='nvim'
 alias l='ls -al'
+
 alias prj="cd $HOME/Projects"
+alias dl="cd $HOME/Downloads"
+
 alias gaa="git add --all"
 alias gco="git checkout"
 alias gr="git reset"
@@ -26,3 +29,9 @@ alias gd="git diff"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# go
+export PATH="$HOME/go/bin:$PATH"
+
+# local bin
+export PATH="$HOME/.local/bin:$PATH"

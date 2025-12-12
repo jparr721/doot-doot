@@ -114,6 +114,8 @@ vim.lsp.enable({
   "biome",
   "lua_ls",
   "ts_ls",
+  "gopls",
+  "eslint"
 })
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
