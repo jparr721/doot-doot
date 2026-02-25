@@ -115,7 +115,8 @@ vim.lsp.enable({
   "lua_ls",
   "ts_ls",
   "gopls",
-  "eslint"
+  "eslint",
+  "rust_analyzer"
 })
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
