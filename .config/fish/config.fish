@@ -44,3 +44,10 @@ set --export PHP_INI_SCAN_DIR $HOME/.config/herd-lite/bin
 
 # Sqlite with vector extensions
 fish_add_path /opt/homebrew/opt/sqlite/bin
+
+# pnpm
+set -gx PNPM_HOME "/Users/jarredparr/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

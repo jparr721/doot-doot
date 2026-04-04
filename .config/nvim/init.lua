@@ -115,10 +115,14 @@ vim.lsp.enable({
   "lua_ls",
   "ts_ls",
   "gopls",
-  "eslint"
+  "eslint",
+  "rust_analyzer"
 })
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+vim.api.nvim_create_autocmd('BufWritePre', {
+  callback = function() vim.lsp.buf.format() end,
+})
 vim.keymap.set('n', '<leader>f', ':Pick files<CR>')
 vim.keymap.set('n', '<leader>g', ':Pick grep<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
