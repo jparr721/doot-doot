@@ -30,7 +30,7 @@ vim.keymap.set('n', '<leader>q', ':quit<CR>')
 vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'gr', vim.lsp.buf.definition)
+vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
 
@@ -95,7 +95,10 @@ require "nvim-tree".setup({
 
 -- Autocomplete
 require 'blink.cmp'.setup({
-  keymap = { preset = "default" },
+  keymap = {
+    preset = "super-tab",
+    ["<CR>"] = { "accept", "fallback" },
+  },
   signature = { enabled = true },
   completion = { documentation = { auto_show = true } },
   sources = {
@@ -116,7 +119,22 @@ vim.lsp.enable({
   "ts_ls",
   "gopls",
   "eslint",
-  "rust_analyzer"
+  "rust_analyzer",
+  "ruff",
+  "pyright"
+})
+
+-- LSP Shit
+vim.lsp.config('ruff', {
+  cmd = { 'uvx', 'ruff', 'server' }
+})
+vim.lsp.config('pyright', {
+  cmd = { 'uvx', '--from', 'pyright', 'pyright-langserver', '--stdio' },
+  settings = {
+    python = {
+      pythonPath = vim.fn.getcwd() .. '/.venv/bin/python',
+    },
+  },
 })
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
