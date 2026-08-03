@@ -44,7 +44,7 @@ vim.pack.add({
   { src = "https://github.com/tpope/vim-commentary" },
   { src = "https://github.com/psliwka/vim-smoothie" },
   { src = "https://github.com/nvim-tree/nvim-tree.lua" },
-  { src = "https://github.com/saghen/blink.cmp", build = "cargo +nightly-2025-09-30 build --release" },
+  { src = "https://github.com/saghen/blink.cmp", version = "v1.9.1", build = "cargo +nightly-2025-09-30 build --release" },
   { src = "https://github.com/morhetz/gruvbox" }
 })
 

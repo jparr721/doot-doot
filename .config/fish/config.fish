@@ -28,26 +28,23 @@ function gp; git push $argv; end
 function gd; git diff $argv; end
 function gl; git pull $argv; end
 
-# opencode
-fish_add_path /Users/quux/.opencode/bin
+# local bin
+fish_add_path $HOME/.local/bin
+
+# cargo
+fish_add_path $HOME/.cargo/bin
 
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
-# local bin
-fish_add_path $HOME/.local/bin
 
-# php, composer
-fish_add_path $HOME/.config/herd-lite/bin
-set --export PHP_INI_SCAN_DIR $HOME/.config/herd-lite/bin
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 
-# Sqlite with vector extensions
-fish_add_path /opt/homebrew/opt/sqlite/bin
+# >>> railway initialize >>>
+source "$HOME/.railway/env.fish"
+# <<< railway initialize <<<
 
-# pnpm
-set -gx PNPM_HOME "/Users/jarredparr/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
+# Composio CLI
+set --export COMPOSIO_INSTALL_DIR "/home/jsp/.composio"
+set --export PATH $COMPOSIO_INSTALL_DIR $PATH

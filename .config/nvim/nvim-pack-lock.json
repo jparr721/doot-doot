@@ -2,7 +2,8 @@
   "plugins": {
     "blink.cmp": {
       "rev": "73ea297bc665c936b51797d5a55599536ffee0d8",
-      "src": "https://github.com/saghen/blink.cmp"
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "'v1.9.1'"
     },
     "gruvbox": {
       "rev": "697c00291db857ca0af00ec154e5bd514a79191f",
