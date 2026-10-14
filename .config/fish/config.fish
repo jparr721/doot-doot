@@ -21,9 +21,10 @@ fish_add_path $HOME/.local/bin
 # cargo
 fish_add_path $HOME/.cargo/bin
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+# bun (also covers omp + other bun-installed CLIs)
+if test -d "$HOME/.bun/bin"
+    fish_add_path "$HOME/.bun/bin"
+end
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
