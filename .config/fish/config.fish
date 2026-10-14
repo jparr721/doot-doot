@@ -1,20 +1,3 @@
-## Core Env
-set -Ux EDITOR nvim
-# Command Overrides
-function vi;  nvim $argv; end
-function vim; nvim $argv; end
-function cat;  bat $argv; end
-function find; fd $argv; end
-function crawl; grep -Irisn $argv; end
-function ls; eza $argv; end
-function l; eza -alh; end
-############################
-# Navigation shortcuts
-############################
-function doc; cd ~/Documents; end
-function dl;  cd ~/Downloads; end
-function prj; cd ~/Projects; end
-
 # local bin
 fish_add_path $HOME/.local/bin
 
