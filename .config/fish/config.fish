@@ -14,19 +14,6 @@ function l; eza -alh; end
 function doc; cd ~/Documents; end
 function dl;  cd ~/Downloads; end
 function prj; cd ~/Projects; end
-############################
-# Git shortcuts
-############################
-function ga; git add $argv; end
-function gaa; git add --all; end
-function gco; git checkout $argv; end
-function gr; git reset $argv; end
-function gb; git branch $argv; end
-function gs; git status $argv; end
-function gc; git commit $argv; end
-function gp; git push $argv; end
-function gd; git diff $argv; end
-function gl; git pull $argv; end
 
 # local bin
 fish_add_path $HOME/.local/bin
@@ -48,3 +35,9 @@ source "$HOME/.railway/env.fish"
 # Composio CLI
 set --export COMPOSIO_INSTALL_DIR "/home/jsp/.composio"
 set --export PATH $COMPOSIO_INSTALL_DIR $PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/private/tmp/google-cloud-sdk/path.fish.inc' ]; . '/private/tmp/google-cloud-sdk/path.fish.inc'; end
+
+# Pi
+fish_add_path "/Users/jarredparr/.local/share/fnm/node-versions/v25.6.0/installation/bin"
